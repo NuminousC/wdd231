@@ -1,22 +1,117 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/normalize.css" />
-    <script src="./scripts/course.js" defer></script>
-    <script src="./scripts/date.js" defer></script>
-    <script src="./scripts/navigation.js" defer></script>
-    <title>Commit Test</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Duru Rowland's WDD 231 course home page featuring an introduction, student information, and a dynamic Web and Computer Programming course list.">
+    <meta name="author" content="Duru Rowland">
+    <meta name="theme-color" content="#0b4f8a">
+    <title>Duru Rowland | WDD 231 Course Home Page</title>
 
-  <body>
-    <h1>THis is Just the Beginning</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro iusto
-      aliquid animi, molestias soluta, corrupti laborum possimus beatae
-      explicabo labore, consequatur quam? Fugit rem accusantium nostrum natus
-      dolorem a minus!
-    </p>
-  </body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <img src="images/logo.svg" alt="Duru Rowland site logo" width="48" height="48">
+            <span>Duru Rowland</span>
+        </div>
+
+        <button id="menu" class="menu-button" type="button" aria-label="Open navigation menu"
+            aria-expanded="false" aria-controls="primary-navigation">
+            <span class="menu-icon" aria-hidden="true">☰</span>
+        </button>
+
+        <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+            <a class="active" href="./" aria-current="page">Home</a>
+            <a href="chamber/">Chamber Project</a>
+            <a href="final/">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="intro-grid">
+            <section class="about card">
+                <h2>About Me</h2>
+                <div class="section-content">
+                    <p>
+                        My name is Duru Rowland, and I am studying Software Development through
+                        BYU-Pathway Worldwide. I enjoy learning how websites and software are
+                        designed, built, tested, and improved.
+                    </p>
+                    <p>
+                        WDD 231 is helping me strengthen my frontend development skills through
+                        practical work with HTML, CSS, JavaScript, responsive design, accessibility,
+                        and browser-based development.
+                    </p>
+                    <p>
+                        My goal is to keep building real projects, understand the technology behind
+                        them, and grow into a professional software developer.
+                    </p>
+                </div>
+            </section>
+
+            <section class="student card">
+                <h2>Student Photo</h2>
+                <div class="section-content photo-area">
+                    <div class="photo-placeholder" role="img" aria-label="Student photo placeholder">
+                        <span>DR</span>
+                    </div>
+                    <p class="photo-note">Student photo placeholder</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="courses card">
+            <h2>Web Certificate Courses</h2>
+
+            <div class="filter-buttons" aria-label="Course filters">
+                <button type="button" class="filter-button active-filter" data-filter="all">All</button>
+                <button type="button" class="filter-button" data-filter="CSE">CSE</button>
+                <button type="button" class="filter-button" data-filter="WDD">WDD</button>
+            </div>
+
+            <div id="course-list" class="course-list" aria-live="polite"></div>
+
+            <p id="credit-total" class="credit-total">
+                Total credits for courses listed above: 0
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="social-links" aria-label="Social media links">
+            <a href="https://github.com/NuminousC/wdd231" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub WDD231 repository">
+                <span aria-hidden="true">GH</span>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn (replace with your profile URL)">
+                <span aria-hidden="true">in</span>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer"
+                aria-label="X (replace with your profile URL)">
+                <span aria-hidden="true">X</span>
+            </a>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; <span id="currentyear"></span> Duru Rowland &bull; Imo State, Nigeria</p>
+        </div>
+
+        <p id="lastModified">Last Modification: </p>
+    </footer>
+</body>
 </html>
