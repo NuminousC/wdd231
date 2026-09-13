@@ -1,0 +1,534 @@
+:root {
+    --primary: #0B3954;
+    --secondary: #087E8B;
+    --accent: #F4B942;
+
+    --background: #F6F8FA;
+    --surface: #FFFFFF;
+
+    --text: #17212B;
+    --muted: #52606D;
+
+    --border: #D8E1E8;
+
+    --shadow: 0 8px 22px rgba(11, 57, 84, 0.10);
+}
+
+
+/* ------------------------------
+   Base
+------------------------------ */
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--text);
+    background: var(--background);
+    min-width: 320px;
+}
+
+a {
+    text-underline-offset: 3px;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.site-header {
+    background: var(--surface);
+    border-bottom: 4px solid var(--accent);
+}
+
+.header-inner {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    position: relative;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    color: var(--primary);
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    min-width: 0;
+}
+
+.brand img {
+    flex: 0 0 auto;
+    border-radius: 10px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.4rem;
+    margin-left: auto;
+}
+
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+.icon-button {
+    border: 2px solid transparent;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 8px;
+
+    font-size: 1.4rem;
+}
+
+.icon-button:hover,
+.icon-button:focus-visible {
+    border-color: var(--secondary);
+    outline: none;
+}
+
+
+/* ------------------------------
+   Navigation
+------------------------------ */
+
+.site-nav {
+    display: none;
+
+    position: absolute;
+
+    top: 76px;
+    left: 0;
+    right: 0;
+
+    z-index: 10;
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow);
+
+    padding: 0.5rem 4%;
+}
+
+.site-nav.open {
+    display: grid;
+}
+
+.site-nav a {
+    padding: 0.9rem 1rem;
+
+    color: var(--text);
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.site-nav a.active {
+    color: var(--primary);
+
+    border-left: 4px solid var(--accent);
+
+    background: rgba(8, 126, 139, 0.08);
+}
+
+
+/* ------------------------------
+   Main
+------------------------------ */
+
+.page-container {
+    width: min(1120px, 92%);
+
+    margin: 0 auto;
+
+    padding: 2rem 0 3rem;
+}
+
+.page-heading {
+    display: grid;
+
+    gap: 0.75rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+    color: var(--secondary);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+h1 {
+    color: var(--primary);
+
+    font-size: clamp(2rem, 8vw, 3rem);
+
+    line-height: 1.05;
+}
+
+.intro {
+    color: var(--muted);
+
+    max-width: 62ch;
+
+    font-size: 1.05rem;
+}
+
+
+/* ------------------------------
+   Directory Toolbar
+------------------------------ */
+
+.directory-toolbar {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+.directory-toolbar h2 {
+    color: var(--primary);
+
+    font-size: 1.45rem;
+}
+
+.view-controls {
+    display: flex;
+
+    gap: 0.5rem;
+}
+
+.view-button {
+    min-width: 78px;
+
+    padding: 0.55rem 0.9rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    font-weight: 600;
+}
+
+.view-button:hover,
+.view-button:focus-visible {
+    border-color: var(--secondary);
+
+    outline: 3px solid rgba(8, 126, 139, 0.18);
+}
+
+.view-button.active {
+    background: var(--primary);
+
+    color: #FFFFFF;
+
+    border-color: var(--primary);
+}
+
+
+/* ------------------------------
+   Member Grid
+------------------------------ */
+
+.member-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+}
+
+.member-card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-top: 5px solid var(--secondary);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+}
+
+.member-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+}
+
+.member-content {
+    padding: 1rem;
+
+    display: grid;
+
+    gap: 0.45rem;
+}
+
+.member-card h3 {
+    color: var(--primary);
+
+    font-size: 1.3rem;
+
+    line-height: 1.1;
+}
+
+.tagline {
+    color: var(--secondary);
+
+    font-weight: 600;
+}
+
+.member-details {
+    color: var(--muted);
+
+    display: grid;
+
+    gap: 0.2rem;
+
+    margin-top: 0.3rem;
+}
+
+.member-details strong {
+    color: var(--text);
+}
+
+.member-details a {
+    color: var(--primary);
+
+    overflow-wrap: anywhere;
+}
+
+.member-description {
+    color: var(--muted);
+
+    margin-top: 0.3rem;
+}
+
+.membership {
+    justify-self: start;
+
+    margin-top: 0.35rem;
+
+    padding: 0.25rem 0.55rem;
+
+    border-radius: 999px;
+
+    background: rgba(244, 185, 66, 0.18);
+
+    color: #674A00;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+}
+
+
+/* ------------------------------
+   List View
+------------------------------ */
+
+.list-view {
+    display: grid;
+
+    gap: 0.35rem;
+}
+
+.list-view .member-card {
+    border-top: 1px solid var(--border);
+
+    border-left: 5px solid var(--secondary);
+
+    border-radius: 5px;
+
+    box-shadow: none;
+
+    display: block;
+}
+
+.list-view .member-image {
+    display: none;
+}
+
+.list-view .member-content {
+    padding: 0.75rem 1rem;
+}
+
+.list-view .member-card h3 {
+    font-size: 1.1rem;
+}
+
+.list-view .tagline,
+.list-view .membership,
+.list-view .member-description {
+    display: none;
+}
+
+
+/* ------------------------------
+   Loading / Error
+------------------------------ */
+
+.loading,
+.error-message {
+    padding: 1.5rem;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    color: var(--muted);
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.site-footer {
+    background: var(--primary);
+
+    color: #FFFFFF;
+
+    border-top: 5px solid var(--accent);
+}
+
+.footer-inner {
+    width: min(1120px, 92%);
+
+    margin: 0 auto;
+
+    padding: 2rem 0;
+
+    display: grid;
+
+    gap: 1.5rem;
+}
+
+.site-footer h2 {
+    font-size: 1.05rem;
+
+    margin-bottom: 0.4rem;
+}
+
+.site-footer p {
+    color: #E7EFF3;
+
+    font-size: 0.92rem;
+}
+
+.site-footer a {
+    color: #FFFFFF;
+}
+
+
+/* ------------------------------
+   Social Links
+------------------------------ */
+
+.social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.75rem;
+}
+
+.social a {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #FFFFFF;
+
+    color: var(--primary);
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    font-size: 1.1rem;
+}
+
+.social a:hover,
+.social a:focus-visible {
+    background: var(--accent);
+
+    outline: none;
+}
+
+
+/* ------------------------------
+   Dark Mode
+------------------------------ */
+
+body.dark {
+    --background: #101820;
+    --surface: #182833;
+
+    --text: #F4F7F9;
+    --muted: #C6D0D7;
+
+    --border: #35505F;
+}
+
+.dark .brand,
+.dark .icon-button {
+    color: #FFFFFF;
+}
+
+.dark h1,
+.dark .directory-toolbar h2,
+.dark .member-card h3 {
+    color: #FFFFFF;
+}
+
+.dark .member-details a {
+    color: #8EDBE0;
+}
