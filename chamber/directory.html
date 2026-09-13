@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Explore the Warri Chamber of Commerce business directory and discover local businesses and professional services in Warri, Delta State, Nigeria."
+    >
+
+    <meta
+        name="author"
+        content="Duru Rowland"
+    >
+
+    <!-- Open Graph / Facebook -->
+    <meta
+        property="og:title"
+        content="Warri Chamber of Commerce | Business Directory"
+    >
+
+    <meta
+        property="og:description"
+        content="Discover local businesses and professional services connected with the Warri Chamber of Commerce."
+    >
+
+    <meta
+        property="og:image"
+        content="https://numinousc.github.io/wdd231/chamber/images/og-directory.jpg"
+    >
+
+    <meta
+        property="og:url"
+        content="https://numinousc.github.io/wdd231/chamber/directory.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="Warri Chamber of Commerce"
+    >
+
+    <title>Warri Chamber of Commerce | Business Directory</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="images/favicon.svg"
+        type="image/svg+xml"
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-inner">
+
+            <a
+                class="brand"
+                href="../index.html"
+                aria-label="Warri Chamber of Commerce home"
+            >
+                <img
+                    src="images/favicon.svg"
+                    alt=""
+                    width="44"
+                    height="44"
+                >
+
+                <span>Warri Chamber of Commerce</span>
+            </a>
+
+            <div class="header-actions">
+
+                <button
+                    id="theme-toggle"
+                    class="icon-button"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false"
+                >
+                    ◐
+                </button>
+
+                <button
+                    id="menu-button"
+                    class="icon-button menu-button"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+            <nav
+                id="primary-navigation"
+                class="site-nav"
+                aria-label="Primary navigation"
+            >
+                <a href="home.html">Home</a>
+
+                <a
+                    class="active"
+                    href="directory.html"
+                    aria-current="page"
+                >
+                    Directory
+                </a>
+
+                <a href="join.html">Join</a>
+
+                <a href="discover.html">Discover</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <div class="page-container">
+
+            <div class="page-heading">
+
+                <div>
+                    <p class="eyebrow">LOCAL BUSINESS NETWORK</p>
+
+                    <h1>Business Directory</h1>
+                </div>
+
+                <p class="intro">
+                    Discover businesses and professional services
+                    serving Warri and the surrounding community.
+                </p>
+
+            </div>
+
+
+            <section aria-labelledby="directory-heading">
+
+                <div class="directory-toolbar">
+
+                    <h2 id="directory-heading">
+                        Chamber Members
+                    </h2>
+
+                    <div
+                        class="view-controls"
+                        aria-label="Directory display options"
+                    >
+
+                        <button
+                            id="grid-button"
+                            class="view-button active"
+                            type="button"
+                            aria-pressed="true"
+                        >
+                            Grid
+                        </button>
+
+                        <button
+                            id="list-button"
+                            class="view-button"
+                            type="button"
+                            aria-pressed="false"
+                        >
+                            List
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="members"
+                    class="member-grid"
+                    aria-live="polite"
+                >
+                    <p class="loading">
+                        Loading chamber members...
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <div class="footer-inner">
+
+            <section
+                class="footer-contact"
+                aria-labelledby="contact-heading"
+            >
+
+                <h2 id="contact-heading">
+                    Warri Chamber of Commerce
+                </h2>
+
+                <p>
+                    14 Commerce Avenue<br>
+                    Warri, Delta State, Nigeria
+                </p>
+
+                <p>
+                    <a href="mailto:info@warrichamber.example">
+                        info@warrichamber.example
+                    </a>
+                    <br>
+
+                    <a href="tel:+2348035550199">
+                        +234 803 555 0199
+                    </a>
+                </p>
+
+            </section>
+
+
+            <section
+                class="social"
+                aria-label="Social media links"
+            >
+
+                <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                >
+                    in
+                </a>
+
+                <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+                    f
+                </a>
+
+                <a
+                    href="https://x.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="X"
+                >
+                    X
+                </a>
+
+            </section>
+
+
+            <section
+                class="footer-development"
+                aria-labelledby="development-heading"
+            >
+
+                <h2 id="development-heading">
+                    WDD231 Class Project
+                </h2>
+
+                <p>Duru Rowland</p>
+
+                <p>
+                    ©
+                    <span id="current-year"></span>
+                    Warri Chamber of Commerce
+                </p>
+
+                <p>
+                    Last Modification:
+                    <span id="last-modified"></span>
+                </p>
+
+            </section>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
