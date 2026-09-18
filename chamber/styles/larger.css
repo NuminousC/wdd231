@@ -479,7 +479,9 @@
 }
 
 @media (min-width: 1000px) {
-
+  .spotlight-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .member-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -501,7 +503,5 @@
     box-shadow: 0 12px 26px rgba(11, 57, 84, 0.14);
   }
 
-  .spotlight-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
 }
