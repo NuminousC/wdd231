@@ -1,331 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Welcome to the Warri Chamber of Commerce. Connect with local businesses, discover community events, and explore opportunities across Warri and the surrounding community."
+    />
 
-  <meta name="description"
-    content="Welcome to the Warri Chamber of Commerce. Connect with local businesses, discover community events, and explore opportunities across Warri and the surrounding community.">
+    <meta name="author" content="Duru Rowland" />
 
-  <meta name="author" content="Duru Rowland">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Warri Chamber of Commerce" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Warri Chamber of Commerce">
+    <meta
+      property="og:description"
+      content="Connecting local businesses with customers, partners, and opportunities in Warri, Delta State, Nigeria."
+    />
 
-  <meta property="og:description"
-    content="Connecting local businesses with customers, partners, and opportunities in Warri, Delta State, Nigeria.">
+    <meta
+      property="og:image"
+      content="https://numinousc.github.io/wdd231/chamber/images/og-directory.jpg"
+    />
 
-  <meta property="og:image" content="https://numinousc.github.io/wdd231/chamber/images/og-directory.jpg">
+    <meta
+      property="og:url"
+      content="https://numinousc.github.io/wdd231/chamber/index.html"
+    />
 
-  <meta property="og:url" content="https://numinousc.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website" />
 
-  <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Warri Chamber of Commerce" />
 
-  <meta property="og:site_name" content="Warri Chamber of Commerce">
+    <title>Warri Chamber of Commerce | Home</title>
 
-  <title>Warri Chamber of Commerce | Home</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script type="module" src="scripts/home.js"></script>
+    <script type="module" src="scripts/weather.js"></script>
+  </head>
 
-  <!-- JavaScript -->
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/date.js" defer></script>
-  <script type="module" src="scripts/home.js"></script>
-</head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Warri Chamber of Commerce home"
+        >
+          <img src="images/favicon.svg" alt="" width="44" height="44" />
 
-<body>
+          <span>Warri Chamber of Commerce</span>
+        </a>
 
-  <header class="site-header">
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="icon-button"
+            type="button"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            ◐
+          </button>
 
-    <div class="header-inner">
+          <button
+            id="menu-button"
+            class="icon-button menu-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            ☰
+          </button>
+        </div>
 
-      <a class="brand" href="index.html" aria-label="Warri Chamber of Commerce home">
-        <img src="images/favicon.svg" alt="" width="44" height="44">
+        <nav
+          id="primary-navigation"
+          class="site-nav"
+          aria-label="Primary navigation"
+        >
+          <a class="active" href="index.html" aria-current="page"> Home </a>
 
-        <span>Warri Chamber of Commerce</span>
-      </a>
+          <a href="directory.html"> Directory </a>
 
-      <div class="header-actions">
+          <a href="join.html"> Join </a>
 
-        <button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode"
-          aria-pressed="false">
-          ◐
-        </button>
-
-        <button id="menu-button" class="icon-button menu-button" type="button" aria-label="Open navigation menu"
-          aria-expanded="false" aria-controls="primary-navigation">
-          ☰
-        </button>
-
+          <a href="discover.html"> Discover </a>
+        </nav>
       </div>
+    </header>
 
-      <nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
-        <a class="active" href="index.html" aria-current="page">
-          Home
-        </a>
+    <main>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <img
+          src="images/warri-hero.jpg"
+          alt="Warri waterfront and city landscape"
+          width="1200"
+          height="630"
+        />
 
-        <a href="directory.html">
-          Directory
-        </a>
+        <div class="hero-content">
+          <p class="eyebrow">WARRI BUSINESS COMMUNITY</p>
 
-        <a href="join.html">
-          Join
-        </a>
-
-        <a href="discover.html">
-          Discover
-        </a>
-      </nav>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-heading">
-
-      <img src="images/warri-hero.webp" alt="Warri waterfront and city landscape" width="1200" height="630">
-
-      <div class="hero-content">
-
-        <p class="eyebrow">
-          WARRI BUSINESS COMMUNITY
-        </p>
-
-        <h1 id="hero-heading">
-          Growing Business. Strengthening Community.
-        </h1>
-
-        <p>
-          Connecting local businesses with customers,
-          partners, and opportunities across Warri.
-        </p>
-
-        <a class="hero-cta" href="join.html">
-          Join the Chamber
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <div class="page-container">
-
-      <!-- Current Events -->
-      <section class="home-section events-section" aria-labelledby="events-heading">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            WHAT'S HAPPENING
-          </p>
-
-          <h2 id="events-heading">
-            Current Events
-          </h2>
-
-        </div>
-
-        <div class="event-card">
-
-          <div class="event-date" aria-hidden="true">
-            <span class="event-month">OCT</span>
-            <span class="event-day">12</span>
-          </div>
-
-          <div class="event-content">
-
-            <h3>
-              Warri Business Networking Forum
-            </h3>
-
-            <p class="event-meta">
-              October 12 · 10:00 AM · Warri
-            </p>
-
-            <p>
-              Meet local entrepreneurs, business owners,
-              and professionals while exploring new
-              opportunities for collaboration.
-            </p>
-
-            <a href="#">
-              View event details
-            </a>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- Weather -->
-      <section class="home-section weather-section" aria-labelledby="weather-heading">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            WARri WEATHER
-          </p>
-
-          <h2 id="weather-heading">
-            Weather in Warri
-          </h2>
-
-        </div>
-
-        <div class="weather-layout">
-
-          <div id="current-weather" class="current-weather" aria-live="polite">
-            <p class="loading">
-              Loading current weather...
-            </p>
-          </div>
-
-          <div class="forecast-container">
-
-            <h3>
-              Three-Day Forecast
-            </h3>
-
-            <div id="forecast" class="forecast-grid" aria-live="polite">
-              <p class="loading">
-                Loading forecast...
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- Business Spotlights -->
-      <section class="home-section spotlight-section" aria-labelledby="spotlight-heading">
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            MEMBER SPOTLIGHT
-          </p>
-
-          <h2 id="spotlight-heading">
-            Chamber Members
-          </h2>
+          <h1 id="hero-heading">Growing Business. Strengthening Community.</h1>
 
           <p>
-            Discover businesses and organizations
-            contributing to the Warri community.
+            Connecting local businesses with customers, partners, and
+            opportunities across Warri.
           </p>
 
+          <a class="hero-cta" href="join.html"> Join the Chamber </a>
         </div>
+      </section>
 
-        <div id="spotlights" class="spotlight-grid" aria-live="polite">
-          <p class="loading">
-            Loading member spotlights...
+      <div class="page-container">
+        <!-- Current Events -->
+        <section
+          class="home-section events-section"
+          aria-labelledby="events-heading"
+        >
+          <div class="section-heading">
+            <p class="eyebrow">WHAT'S HAPPENING</p>
+
+            <h2 id="events-heading">Current Events</h2>
+          </div>
+
+          <div class="event-card">
+            <div class="event-date" aria-hidden="true">
+              <span class="event-month">OCT</span>
+              <span class="event-day">12</span>
+            </div>
+
+            <div class="event-content">
+              <h3>Warri Business Networking Forum</h3>
+
+              <p class="event-meta">October 12 · 10:00 AM · Warri</p>
+
+              <p>
+                Meet local entrepreneurs, business owners, and professionals
+                while exploring new opportunities for collaboration.
+              </p>
+
+              <a href="#"> View event details </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Weather -->
+        <section
+          class="home-section weather-section"
+          aria-labelledby="weather-heading"
+        >
+          <div class="section-heading">
+            <p class="eyebrow">WARri WEATHER</p>
+
+            <h2 id="weather-heading">Weather in Warri</h2>
+          </div>
+
+          <div class="weather-layout">
+            <div
+              id="current-weather"
+              class="current-weather"
+              aria-live="polite"
+            >
+              <p class="loading">Loading current weather...</p>
+            </div>
+
+            <div class="forecast-container">
+              <h3>Three-Day Forecast</h3>
+
+              <div id="forecast" class="forecast-grid" aria-live="polite">
+                <p class="loading">Loading forecast...</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Business Spotlights -->
+        <section
+          class="home-section spotlight-section"
+          aria-labelledby="spotlight-heading"
+        >
+          <div class="section-heading">
+            <p class="eyebrow">MEMBER SPOTLIGHT</p>
+
+            <h2 id="spotlight-heading">Chamber Members</h2>
+
+            <p>
+              Discover businesses and organizations contributing to the Warri
+              community.
+            </p>
+          </div>
+
+          <div id="spotlights" class="spotlight-grid" aria-live="polite">
+            <p class="loading">Loading member spotlights...</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <section class="footer-contact" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Warri Chamber of Commerce</h2>
+
+          <p>
+            14 Commerce Avenue<br />
+            Warri, Delta State, Nigeria
           </p>
-        </div>
 
-      </section>
+          <p>
+            <a href="mailto:info@warrichamber.example">
+              info@warrichamber.example
+            </a>
+            <br />
 
-    </div>
+            <a href="tel:+2348035550199"> +234 803 555 0199 </a>
+          </p>
+        </section>
 
-  </main>
-
-
-  <footer class="site-footer">
-
-    <div class="footer-inner">
-
-      <section class="footer-contact" aria-labelledby="contact-heading">
-
-        <h2 id="contact-heading">
-          Warri Chamber of Commerce
-        </h2>
-
-        <p>
-          14 Commerce Avenue<br>
-          Warri, Delta State, Nigeria
-        </p>
-
-        <p>
-          <a href="mailto:info@warrichamber.example">
-            info@warrichamber.example
+        <section class="social" aria-label="Social media links">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            in
           </a>
-          <br>
 
-          <a href="tel:+2348035550199">
-            +234 803 555 0199
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            f
           </a>
-        </p>
 
-      </section>
+          <a
+            href="https://x.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+          >
+            X
+          </a>
+        </section>
 
+        <section
+          class="footer-development"
+          aria-labelledby="development-heading"
+        >
+          <h2 id="development-heading">WDD231 Class Project</h2>
 
-      <section class="social" aria-label="Social media links">
+          <p>Duru Rowland</p>
 
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          in
-        </a>
+          <p>
+            ©
+            <span id="current-year"></span>
+            Warri Chamber of Commerce
+          </p>
 
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          f
-        </a>
-
-        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
-          X
-        </a>
-
-      </section>
-
-
-      <section class="footer-development" aria-labelledby="development-heading">
-
-        <h2 id="development-heading">
-          WDD231 Class Project
-        </h2>
-
-        <p>
-          Duru Rowland
-        </p>
-
-        <p>
-          ©
-          <span id="current-year"></span>
-          Warri Chamber of Commerce
-        </p>
-
-        <p>
-          Last Modification:
-          <span id="last-modified"></span>
-        </p>
-
-      </section>
-
-    </div>
-
-  </footer>
-
-</body>
-
+          <p>
+            Last Modification:
+            <span id="last-modified"></span>
+          </p>
+        </section>
+      </div>
+    </footer>
+  </body>
 </html>

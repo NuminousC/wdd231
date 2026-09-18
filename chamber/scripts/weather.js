@@ -1,34 +1,29 @@
-const API_KEY = "YOUR_OPENWEATHER_API_KEY";
+const API_KEY = "470502a5a584b5389d94957ff2e547f5";
 const CITY = "Warri";
 const COUNTRY = "NG";
 
 const currentWeatherElement = document.querySelector("#current-weather");
 const forecastElement = document.querySelector("#forecast");
 
-const currentWeatherUrl =
-  `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY}&units=metric&appid=${API_KEY}`;
+const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${CITY},${COUNTRY}&units=metric&appid=${API_KEY}`;
 
-const forecastUrl =
-  `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=metric&appid=${API_KEY}`;
-
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=metric&appid=${API_KEY}`;
 
 async function getWeather() {
   try {
     const [currentResponse, forecastResponse] = await Promise.all([
       fetch(currentWeatherUrl),
-      fetch(forecastUrl)
+      fetch(forecastUrl),
     ]);
 
     if (!currentResponse.ok) {
       throw new Error(
-        `Current weather request failed: ${currentResponse.status}`
+        `Current weather request failed: ${currentResponse.status}`,
       );
     }
 
     if (!forecastResponse.ok) {
-      throw new Error(
-        `Forecast request failed: ${forecastResponse.status}`
-      );
+      throw new Error(`Forecast request failed: ${forecastResponse.status}`);
     }
 
     const currentData = await currentResponse.json();
@@ -36,7 +31,6 @@ async function getWeather() {
 
     displayCurrentWeather(currentData);
     displayForecast(forecastData);
-
   } catch (error) {
     console.error("Weather error:", error);
 
@@ -54,13 +48,11 @@ async function getWeather() {
   }
 }
 
-
 function displayCurrentWeather(weather) {
   const temperature = Math.round(weather.main.temp);
   const description = weather.weather[0].description;
   const icon = weather.weather[0].icon;
-  const iconUrl =
-    `https://openweathermap.org/img/wn/${icon}@2x.png`;
+  const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
   currentWeatherElement.innerHTML = `
         <h3>Current Conditions</h3>
@@ -101,37 +93,27 @@ function displayCurrentWeather(weather) {
     `;
 }
 
-
 function getDateKey(timestamp, timezoneOffset) {
-  const localDate = new Date(
-    (timestamp + timezoneOffset) * 1000
-  );
+  const localDate = new Date((timestamp + timezoneOffset) * 1000);
 
   return localDate.toISOString().split("T")[0];
 }
 
-
 function formatForecastDate(timestamp, timezoneOffset) {
-  const localDate = new Date(
-    (timestamp + timezoneOffset) * 1000
-  );
+  const localDate = new Date((timestamp + timezoneOffset) * 1000);
 
   return new Intl.DateTimeFormat("en-NG", {
     weekday: "short",
     month: "short",
-    day: "numeric"
+    day: "numeric",
   }).format(localDate);
 }
-
 
 function getThreeDayForecast(data) {
   const days = new Map();
 
   data.list.forEach((item) => {
-    const dateKey = getDateKey(
-      item.dt,
-      data.city.timezone
-    );
+    const dateKey = getDateKey(item.dt, data.city.timezone);
 
     if (!days.has(dateKey)) {
       days.set(dateKey, []);
@@ -142,7 +124,6 @@ function getThreeDayForecast(data) {
 
   return Array.from(days.values()).slice(1, 4);
 }
-
 
 function displayForecast(data) {
   const forecastDays = getThreeDayForecast(data);
@@ -156,36 +137,27 @@ function displayForecast(data) {
     return;
   }
 
-  forecastElement.innerHTML = forecastDays.map((day) => {
+  forecastElement.innerHTML = forecastDays
+    .map((day) => {
+      const representativeForecast = day[Math.floor(day.length / 2)];
 
-    const representativeForecast =
-      day[Math.floor(day.length / 2)];
+      const averageTemperature =
+        day.reduce((total, item) => total + item.main.temp, 0) / day.length;
 
-    const averageTemperature =
-      day.reduce(
-        (total, item) => total + item.main.temp,
-        0
-      ) / day.length;
+      const temperature = Math.round(averageTemperature);
 
-    const temperature =
-      Math.round(averageTemperature);
+      const description = representativeForecast.weather[0].description;
 
-    const description =
-      representativeForecast.weather[0].description;
+      const icon = representativeForecast.weather[0].icon;
 
-    const icon =
-      representativeForecast.weather[0].icon;
+      const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-    const iconUrl =
-      `https://openweathermap.org/img/wn/${icon}@2x.png`;
-
-    const date =
-      formatForecastDate(
+      const date = formatForecastDate(
         representativeForecast.dt,
-        data.city.timezone
+        data.city.timezone,
       );
 
-    return `
+      return `
             <article class="forecast-card">
 
                 <h4>${date}</h4>
@@ -207,9 +179,8 @@ function displayForecast(data) {
 
             </article>
         `;
-
-  }).join("");
+    })
+    .join("");
 }
-
 
 getWeather();

@@ -96,10 +96,12 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg,
-        rgba(11, 57, 84, 0.92),
-        rgba(11, 57, 84, 0.55),
-        rgba(11, 57, 84, 0.12));
+    background: linear-gradient(
+      90deg,
+      rgba(11, 57, 84, 0.92),
+      rgba(11, 57, 84, 0.55),
+      rgba(11, 57, 84, 0.12)
+    );
   }
 
   .hero-content {
@@ -149,7 +151,6 @@
     outline-offset: 2px;
   }
 
-
   /* ------------------------------
    Home Sections
 ------------------------------ */
@@ -168,12 +169,11 @@
     line-height: 1.1;
   }
 
-  .section-heading>p:last-child {
+  .section-heading > p:last-child {
     color: var(--muted);
     max-width: 65ch;
     margin-top: 0.5rem;
   }
-
 
   /* ------------------------------
    Events
@@ -237,13 +237,13 @@
     font-weight: 700;
   }
 
-
   /* ------------------------------
    Weather
 ------------------------------ */
 
   .weather-layout {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 
@@ -339,7 +339,6 @@
     font-size: 0.9rem;
   }
 
-
   /* ------------------------------
    Business Spotlights
 ------------------------------ */
@@ -350,27 +349,9 @@
     gap: 1rem;
   }
 
-  .spotlight-card {
-    display: grid;
-    grid-template-columns: 90px 1fr;
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-top: 5px solid var(--secondary);
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-  }
-
   .spotlight-logo {
-    display: block;
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    padding: 0.35rem;
-    background: #ffffff;
-    border-radius: 8px;
+    height: 220px;
+    object-fit: cover;
   }
 
   .spotlight-content h3 {
@@ -399,7 +380,6 @@
     font-size: 0.75rem;
     font-weight: 700;
   }
-
 
   /* ------------------------------
    Dark Mode - Home
@@ -444,8 +424,7 @@
   .list-view .member-content {
     display: grid;
 
-    grid-template-columns:
-      minmax(180px, 0.7fr) 1.4fr auto;
+    grid-template-columns: minmax(180px, 0.7fr) 1.4fr auto;
 
     align-items: center;
 
@@ -467,8 +446,7 @@
     ------------------------------ */
 
   .footer-inner {
-    grid-template-columns:
-      1.5fr 0.7fr 1.2fr;
+    grid-template-columns: 1.5fr 0.7fr 1.2fr;
 
     align-items: center;
   }
@@ -502,6 +480,4 @@
 
     box-shadow: 0 12px 26px rgba(11, 57, 84, 0.14);
   }
-
-
 }
