@@ -1,9 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
-<rect width="640" height="400" fill="#0B3954"></rect>
-<circle cx="520" cy="90" r="130" fill="#F4B942" opacity=".2"></circle>
-<rect x="45" y="45" width="105" height="105" rx="22" fill="#F4B942"></rect>
-<text x="97" y="112" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#17212B">WB</text>
-<text x="45" y="245" font-family="Arial" font-size="31" font-weight="700" fill="#fff">Warri Business Hub</text>
-<text x="45" y="288" font-family="Arial" font-size="20" fill="#fff">Business Support &amp; Networking</text>
-<text x="45" y="352" font-family="Arial" font-size="17" fill="#fff">Warri • Delta State • Nigeria</text>
+	<rect width="640" height="400" fill="#0B3954"></rect>
+	<circle cx="520" cy="90" r="130" fill="#F4B942" opacity=".2"></circle>
+	<rect x="45" y="45" width="105" height="105" rx="22" fill="#F4B942"></rect>
+	<text
+		x="97"
+		y="112"
+		text-anchor="middle"
+		font-family="Arial"
+		font-size="42"
+		font-weight="700"
+		fill="#17212B"
+	>
+		WB
+	</text>
+	<text
+		x="45"
+		y="245"
+		font-family="Arial"
+		font-size="31"
+		font-weight="700"
+		fill="#fff"
+	>
+		Warri Business Hub
+	</text>
+	<text x="45" y="288" font-family="Arial" font-size="20" fill="#fff">
+		Business Support &amp; Networking
+	</text>
+	<text x="45" y="352" font-family="Arial" font-size="17" fill="#fff">
+		Warri • Delta State • Nigeria
+	</text>
 </svg>

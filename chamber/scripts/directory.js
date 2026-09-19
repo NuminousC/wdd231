@@ -9,26 +9,26 @@ const listButton = document.querySelector("#list-button");
 ------------------------------ */
 
 async function getMembers() {
-  try {
-    const response = await fetch("data/members.json");
+	try {
+		const response = await fetch("data/members.json");
 
-    if (!response.ok) {
-      throw new Error(`Unable to load member data: ${response.status}`);
-    }
+		if (!response.ok) {
+			throw new Error(`Unable to load member data: ${response.status}`);
+		}
 
-    const members = await response.json();
+		const members = await response.json();
 
-    displayMembers(members);
-  } catch (error) {
-    console.error(error);
+		displayMembers(members);
+	} catch (error) {
+		console.error(error);
 
-    membersContainer.innerHTML = `
+		membersContainer.innerHTML = `
             <p class="error-message">
                 The member directory could not be loaded.
                 Please try again later.
             </p>
         `;
-  }
+	}
 }
 
 /* ------------------------------
@@ -36,15 +36,15 @@ async function getMembers() {
 ------------------------------ */
 
 function membershipLabel(level) {
-  const labels = {
-    1: "Member",
+	const labels = {
+		1: "Member",
 
-    2: "Silver Member",
+		2: "Silver Member",
 
-    3: "Gold Member",
-  };
+		3: "Gold Member",
+	};
 
-  return labels[level] ?? "Member";
+	return labels[level] ?? "Member";
 }
 
 /* ------------------------------
@@ -52,9 +52,9 @@ function membershipLabel(level) {
 ------------------------------ */
 
 function displayMembers(members) {
-  membersContainer.innerHTML = members
-    .map(
-      (member) => `
+	membersContainer.innerHTML = members
+		.map(
+			(member) => `
 
             <article class="member-card">
 
@@ -121,8 +121,8 @@ function displayMembers(members) {
             </article>
 
         `,
-    )
-    .join("");
+		)
+		.join("");
 }
 
 /* ------------------------------
@@ -130,19 +130,19 @@ function displayMembers(members) {
 ------------------------------ */
 
 function setView(view) {
-  const isList = view === "list";
+	const isList = view === "list";
 
-  membersContainer.classList.toggle("list-view", isList);
+	membersContainer.classList.toggle("list-view", isList);
 
-  membersContainer.classList.toggle("member-grid", !isList);
+	membersContainer.classList.toggle("member-grid", !isList);
 
-  gridButton.classList.toggle("active", !isList);
+	gridButton.classList.toggle("active", !isList);
 
-  listButton.classList.toggle("active", isList);
+	listButton.classList.toggle("active", isList);
 
-  gridButton.setAttribute("aria-pressed", String(!isList));
+	gridButton.setAttribute("aria-pressed", String(!isList));
 
-  listButton.setAttribute("aria-pressed", String(isList));
+	listButton.setAttribute("aria-pressed", String(isList));
 }
 
 /* ------------------------------

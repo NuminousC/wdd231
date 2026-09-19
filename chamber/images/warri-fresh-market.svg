@@ -1,9 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
-<rect width="640" height="400" fill="#087E8B"></rect>
-<circle cx="520" cy="90" r="130" fill="#F7D06A" opacity=".3"></circle>
-<rect x="45" y="45" width="105" height="105" rx="22" fill="#F7D06A"></rect>
-<text x="97" y="112" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#17212B">WFM</text>
-<text x="45" y="245" font-family="Arial" font-size="31" font-weight="700" fill="#fff">Warri Fresh Market</text>
-<text x="45" y="288" font-family="Arial" font-size="20" fill="#fff">Fresh Food &amp; Local Produce</text>
-<text x="45" y="352" font-family="Arial" font-size="17" fill="#fff">Warri • Delta State • Nigeria</text>
+	<rect width="640" height="400" fill="#087E8B"></rect>
+	<circle cx="520" cy="90" r="130" fill="#F7D06A" opacity=".3"></circle>
+	<rect x="45" y="45" width="105" height="105" rx="22" fill="#F7D06A"></rect>
+	<text
+		x="97"
+		y="112"
+		text-anchor="middle"
+		font-family="Arial"
+		font-size="38"
+		font-weight="700"
+		fill="#17212B"
+	>
+		WFM
+	</text>
+	<text
+		x="45"
+		y="245"
+		font-family="Arial"
+		font-size="31"
+		font-weight="700"
+		fill="#fff"
+	>
+		Warri Fresh Market
+	</text>
+	<text x="45" y="288" font-family="Arial" font-size="20" fill="#fff">
+		Fresh Food &amp; Local Produce
+	</text>
+	<text x="45" y="352" font-family="Arial" font-size="17" fill="#fff">
+		Warri • Delta State • Nigeria
+	</text>
 </svg>

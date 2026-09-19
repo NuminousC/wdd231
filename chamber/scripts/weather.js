@@ -10,51 +10,51 @@ const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${C
 const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY},${COUNTRY}&units=metric&appid=${API_KEY}`;
 
 async function getWeather() {
-  try {
-    const [currentResponse, forecastResponse] = await Promise.all([
-      fetch(currentWeatherUrl),
-      fetch(forecastUrl),
-    ]);
+	try {
+		const [currentResponse, forecastResponse] = await Promise.all([
+			fetch(currentWeatherUrl),
+			fetch(forecastUrl),
+		]);
 
-    if (!currentResponse.ok) {
-      throw new Error(
-        `Current weather request failed: ${currentResponse.status}`,
-      );
-    }
+		if (!currentResponse.ok) {
+			throw new Error(
+				`Current weather request failed: ${currentResponse.status}`,
+			);
+		}
 
-    if (!forecastResponse.ok) {
-      throw new Error(`Forecast request failed: ${forecastResponse.status}`);
-    }
+		if (!forecastResponse.ok) {
+			throw new Error(`Forecast request failed: ${forecastResponse.status}`);
+		}
 
-    const currentData = await currentResponse.json();
-    const forecastData = await forecastResponse.json();
+		const currentData = await currentResponse.json();
+		const forecastData = await forecastResponse.json();
 
-    displayCurrentWeather(currentData);
-    displayForecast(forecastData);
-  } catch (error) {
-    console.error("Weather error:", error);
+		displayCurrentWeather(currentData);
+		displayForecast(forecastData);
+	} catch (error) {
+		console.error("Weather error:", error);
 
-    currentWeatherElement.innerHTML = `
+		currentWeatherElement.innerHTML = `
             <p class="error-message">
                 Weather information is temporarily unavailable.
             </p>
         `;
 
-    forecastElement.innerHTML = `
+		forecastElement.innerHTML = `
             <p class="error-message">
                 Forecast information is temporarily unavailable.
             </p>
         `;
-  }
+	}
 }
 
 function displayCurrentWeather(weather) {
-  const temperature = Math.round(weather.main.temp);
-  const description = weather.weather[0].description;
-  const icon = weather.weather[0].icon;
-  const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+	const temperature = Math.round(weather.main.temp);
+	const description = weather.weather[0].description;
+	const icon = weather.weather[0].icon;
+	const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-  currentWeatherElement.innerHTML = `
+	currentWeatherElement.innerHTML = `
         <h3>Current Conditions</h3>
 
         <div class="weather-main">
@@ -94,70 +94,70 @@ function displayCurrentWeather(weather) {
 }
 
 function getDateKey(timestamp, timezoneOffset) {
-  const localDate = new Date((timestamp + timezoneOffset) * 1000);
+	const localDate = new Date((timestamp + timezoneOffset) * 1000);
 
-  return localDate.toISOString().split("T")[0];
+	return localDate.toISOString().split("T")[0];
 }
 
 function formatForecastDate(timestamp, timezoneOffset) {
-  const localDate = new Date((timestamp + timezoneOffset) * 1000);
+	const localDate = new Date((timestamp + timezoneOffset) * 1000);
 
-  return new Intl.DateTimeFormat("en-NG", {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-  }).format(localDate);
+	return new Intl.DateTimeFormat("en-NG", {
+		weekday: "short",
+		month: "short",
+		day: "numeric",
+	}).format(localDate);
 }
 
 function getThreeDayForecast(data) {
-  const days = new Map();
+	const days = new Map();
 
-  data.list.forEach((item) => {
-    const dateKey = getDateKey(item.dt, data.city.timezone);
+	data.list.forEach((item) => {
+		const dateKey = getDateKey(item.dt, data.city.timezone);
 
-    if (!days.has(dateKey)) {
-      days.set(dateKey, []);
-    }
+		if (!days.has(dateKey)) {
+			days.set(dateKey, []);
+		}
 
-    days.get(dateKey).push(item);
-  });
+		days.get(dateKey).push(item);
+	});
 
-  return Array.from(days.values()).slice(1, 4);
+	return Array.from(days.values()).slice(1, 4);
 }
 
 function displayForecast(data) {
-  const forecastDays = getThreeDayForecast(data);
+	const forecastDays = getThreeDayForecast(data);
 
-  if (forecastDays.length < 3) {
-    forecastElement.innerHTML = `
+	if (forecastDays.length < 3) {
+		forecastElement.innerHTML = `
             <p class="error-message">
                 Three-day forecast is currently unavailable.
             </p>
         `;
-    return;
-  }
+		return;
+	}
 
-  forecastElement.innerHTML = forecastDays
-    .map((day) => {
-      const representativeForecast = day[Math.floor(day.length / 2)];
+	forecastElement.innerHTML = forecastDays
+		.map((day) => {
+			const representativeForecast = day[Math.floor(day.length / 2)];
 
-      const averageTemperature =
-        day.reduce((total, item) => total + item.main.temp, 0) / day.length;
+			const averageTemperature =
+				day.reduce((total, item) => total + item.main.temp, 0) / day.length;
 
-      const temperature = Math.round(averageTemperature);
+			const temperature = Math.round(averageTemperature);
 
-      const description = representativeForecast.weather[0].description;
+			const description = representativeForecast.weather[0].description;
 
-      const icon = representativeForecast.weather[0].icon;
+			const icon = representativeForecast.weather[0].icon;
 
-      const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+			const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-      const date = formatForecastDate(
-        representativeForecast.dt,
-        data.city.timezone,
-      );
+			const date = formatForecastDate(
+				representativeForecast.dt,
+				data.city.timezone,
+			);
 
-      return `
+			return `
             <article class="forecast-card">
 
                 <h4>${date}</h4>
@@ -179,8 +179,8 @@ function displayForecast(data) {
 
             </article>
         `;
-    })
-    .join("");
+		})
+		.join("");
 }
 
 getWeather();

@@ -6,27 +6,27 @@ const themeToggle = document.querySelector("#theme-toggle");
 /* Mobile navigation */
 
 menuButton?.addEventListener("click", () => {
-  const isOpen = primaryNavigation.classList.toggle("open");
+	const isOpen = primaryNavigation.classList.toggle("open");
 
-  menuButton.setAttribute("aria-expanded", String(isOpen));
+	menuButton.setAttribute("aria-expanded", String(isOpen));
 
-  menuButton.setAttribute(
-    "aria-label",
-    isOpen ? "Close navigation menu" : "Open navigation menu",
-  );
+	menuButton.setAttribute(
+		"aria-label",
+		isOpen ? "Close navigation menu" : "Open navigation menu",
+	);
 
-  menuButton.textContent = isOpen ? "✕" : "☰";
+	menuButton.textContent = isOpen ? "✕" : "☰";
 });
 
 /* Dark mode */
 
 themeToggle?.addEventListener("click", () => {
-  const darkMode = document.body.classList.toggle("dark");
+	const darkMode = document.body.classList.toggle("dark");
 
-  themeToggle.setAttribute("aria-pressed", String(darkMode));
+	themeToggle.setAttribute("aria-pressed", String(darkMode));
 
-  themeToggle.setAttribute(
-    "aria-label",
-    darkMode ? "Switch to light mode" : "Switch to dark mode",
-  );
+	themeToggle.setAttribute(
+		"aria-label",
+		darkMode ? "Switch to light mode" : "Switch to dark mode",
+	);
 });

@@ -1,79 +1,79 @@
 [
-  {
-    "name": "Warri Business Hub",
-    "tagline": "Business Support & Networking",
-    "address": "12 Effurun-Sapele Road, Warri, Delta State",
-    "phone": "+234 803 555 0101",
-    "website": "https://example.com/warri-business-hub",
-    "image": "warri-business-hub.svg",
-    "membershipLevel": 3,
-    "category": "Business Services",
-    "description": "A business support center helping entrepreneurs connect, learn, and grow."
-  },
-  {
-    "name": "Delta Industrial Supplies",
-    "tagline": "Industrial & Safety Equipment",
-    "address": "28 Okumagba Avenue, Warri, Delta State",
-    "phone": "+234 806 555 0102",
-    "website": "https://example.com/delta-industrial-supplies",
-    "image": "delta-industrial-supplies.svg",
-    "membershipLevel": 2,
-    "category": "Industrial Services",
-    "description": "Supplies tools, protective equipment, and industrial materials to local businesses."
-  },
-  {
-    "name": "Niger Delta Marine Services",
-    "tagline": "Marine Logistics & Support",
-    "address": "7 Warri Port Road, Warri, Delta State",
-    "phone": "+234 809 555 0103",
-    "website": "https://example.com/niger-delta-marine",
-    "image": "niger-delta-marine.svg",
-    "membershipLevel": 3,
-    "category": "Marine Services",
-    "description": "Provides marine logistics, vessel support, and related services for businesses."
-  },
-  {
-    "name": "Effurun Tech Solutions",
-    "tagline": "Technology for Growing Businesses",
-    "address": "16 PTI Road, Effurun, Delta State",
-    "phone": "+234 810 555 0104",
-    "website": "https://example.com/effurun-tech",
-    "image": "effurun-tech-solutions.svg",
-    "membershipLevel": 2,
-    "category": "Technology",
-    "description": "Offers websites, digital tools, IT support, and technology training."
-  },
-  {
-    "name": "Warri Fresh Market",
-    "tagline": "Fresh Food & Local Produce",
-    "address": "4 Airport Road, Warri, Delta State",
-    "phone": "+234 812 555 0105",
-    "website": "https://example.com/warri-fresh-market",
-    "image": "warri-fresh-market.svg",
-    "membershipLevel": 1,
-    "category": "Food & Retail",
-    "description": "A local food retailer focused on fresh produce and everyday household needs."
-  },
-  {
-    "name": "Pinnacle Legal & Advisory",
-    "tagline": "Practical Advice for Business",
-    "address": "21 Deco Road, Warri, Delta State",
-    "phone": "+234 814 555 0106",
-    "website": "https://example.com/pinnacle-legal",
-    "image": "pinnacle-legal.svg",
-    "membershipLevel": 2,
-    "category": "Professional Services",
-    "description": "Provides legal, compliance, and business advisory services to organizations."
-  },
-  {
-    "name": "Escravos Energy Services",
-    "tagline": "Energy & Technical Services",
-    "address": "9 Refinery Road, Ekpan, Delta State",
-    "phone": "+234 816 555 0107",
-    "website": "https://example.com/escravos-energy",
-    "image": "escravos-energy.svg",
-    "membershipLevel": 3,
-    "category": "Energy Services",
-    "description": "Supports energy-sector clients with technical and operational services."
-  }
+	{
+		"name": "Warri Business Hub",
+		"tagline": "Business Support & Networking",
+		"address": "12 Effurun-Sapele Road, Warri, Delta State",
+		"phone": "+234 803 555 0101",
+		"website": "https://example.com/warri-business-hub",
+		"image": "warri-business-hub.svg",
+		"membershipLevel": 3,
+		"category": "Business Services",
+		"description": "A business support center helping entrepreneurs connect, learn, and grow."
+	},
+	{
+		"name": "Delta Industrial Supplies",
+		"tagline": "Industrial & Safety Equipment",
+		"address": "28 Okumagba Avenue, Warri, Delta State",
+		"phone": "+234 806 555 0102",
+		"website": "https://example.com/delta-industrial-supplies",
+		"image": "delta-industrial-supplies.svg",
+		"membershipLevel": 2,
+		"category": "Industrial Services",
+		"description": "Supplies tools, protective equipment, and industrial materials to local businesses."
+	},
+	{
+		"name": "Niger Delta Marine Services",
+		"tagline": "Marine Logistics & Support",
+		"address": "7 Warri Port Road, Warri, Delta State",
+		"phone": "+234 809 555 0103",
+		"website": "https://example.com/niger-delta-marine",
+		"image": "niger-delta-marine.svg",
+		"membershipLevel": 3,
+		"category": "Marine Services",
+		"description": "Provides marine logistics, vessel support, and related services for businesses."
+	},
+	{
+		"name": "Effurun Tech Solutions",
+		"tagline": "Technology for Growing Businesses",
+		"address": "16 PTI Road, Effurun, Delta State",
+		"phone": "+234 810 555 0104",
+		"website": "https://example.com/effurun-tech",
+		"image": "effurun-tech-solutions.svg",
+		"membershipLevel": 2,
+		"category": "Technology",
+		"description": "Offers websites, digital tools, IT support, and technology training."
+	},
+	{
+		"name": "Warri Fresh Market",
+		"tagline": "Fresh Food & Local Produce",
+		"address": "4 Airport Road, Warri, Delta State",
+		"phone": "+234 812 555 0105",
+		"website": "https://example.com/warri-fresh-market",
+		"image": "warri-fresh-market.svg",
+		"membershipLevel": 1,
+		"category": "Food & Retail",
+		"description": "A local food retailer focused on fresh produce and everyday household needs."
+	},
+	{
+		"name": "Pinnacle Legal & Advisory",
+		"tagline": "Practical Advice for Business",
+		"address": "21 Deco Road, Warri, Delta State",
+		"phone": "+234 814 555 0106",
+		"website": "https://example.com/pinnacle-legal",
+		"image": "pinnacle-legal.svg",
+		"membershipLevel": 2,
+		"category": "Professional Services",
+		"description": "Provides legal, compliance, and business advisory services to organizations."
+	},
+	{
+		"name": "Escravos Energy Services",
+		"tagline": "Energy & Technical Services",
+		"address": "9 Refinery Road, Ekpan, Delta State",
+		"phone": "+234 816 555 0107",
+		"website": "https://example.com/escravos-energy",
+		"image": "escravos-energy.svg",
+		"membershipLevel": 3,
+		"category": "Energy Services",
+		"description": "Supports energy-sector clients with technical and operational services."
+	}
 ]
