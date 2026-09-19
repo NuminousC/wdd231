@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --primary: #0b3954;
   --secondary: #087e8b;
@@ -12,12 +18,6 @@
   --border: #d8e1e8;
 
   --shadow: 0 8px 22px rgba(11, 57, 84, 0.1);
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 /* ------------------------------
@@ -201,7 +201,7 @@ h1 {
 }
 
 /* ------------------------------
-   Home Page
+   Home Page - Hero
 ------------------------------ */
 
 .hero {
@@ -385,8 +385,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .current-weather h3 {
@@ -399,7 +397,6 @@ h1 {
   align-items: center;
   gap: 1rem;
   margin-top: 0.5rem;
-  justify-content: center;
 }
 
 .weather-icon {
@@ -494,7 +491,7 @@ h1 {
 .spotlight-logo {
   display: block;
   width: 100%;
-  height: 220px;
+  height: 180px;
   object-fit: contain;
   padding: 1rem;
   background: #ffffff;
@@ -504,7 +501,6 @@ h1 {
   padding: 1rem;
   display: grid;
   gap: 0.3rem;
-  text-align: center;
 }
 
 .spotlight-content h3 {
