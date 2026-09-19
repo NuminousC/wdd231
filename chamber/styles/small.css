@@ -385,6 +385,8 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .current-weather h3 {
@@ -397,6 +399,7 @@ h1 {
   align-items: center;
   gap: 1rem;
   margin-top: 0.5rem;
+  justify-content: center;
 }
 
 .weather-icon {
