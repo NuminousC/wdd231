@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Thank you for applying to join the Warri Chamber of Commerce.">
+		<meta name="author" content="Duru Rowland">
+		<meta property="og:title" content="Warri Chamber of Commerce | Application Received">
+		<meta property="og:description" content="Your Warri Chamber of Commerce membership application has been received.">
+		<meta property="og:image" content="https://numinousc.github.io/wdd231/chamber/images/og-directory.jpg">
+		<meta property="og:url" content="https://numinousc.github.io/wdd231/chamber/thankyou.html">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Warri Chamber of Commerce">
+		<title>Warri Chamber of Commerce | Application Received</title>
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css">
+		<link rel="stylesheet" href="styles/join.css">
+		<script src="scripts/navigation.js" defer></script>
+		<script src="scripts/date.js" defer></script>
+		<script src="scripts/thankyou.js" defer></script>
+	</head>
+
+	<body>
+		<header class="site-header">
+			<div class="header-inner">
+				<a class="brand" href="index.html" aria-label="Warri Chamber of Commerce home">
+					<img src="images/favicon.svg" alt="" width="44" height="44">
+					<span>Warri Chamber of Commerce</span>
+				</a>
+				<div class="header-actions">
+					<button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode" aria-pressed="false">◐</button>
+					<button id="menu-button" class="icon-button menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+				</div>
+				<nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+					<a href="index.html">Home</a>
+					<a href="directory.html">Directory</a>
+					<a class="active" href="join.html" aria-current="page">Join</a>
+					<a href="discover.html">Discover</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<div class="page-container">
+				<header class="page-heading">
+					<div>
+						<p class="eyebrow">APPLICATION RECEIVED</p>
+						<h1>Thank You</h1>
+					</div>
+					<p class="intro">Thank you for submitting your membership application. The details below were received from your form submission.</p>
+				</header>
+
+				<section class="thankyou-card" aria-labelledby="submission-heading">
+					<h2 id="submission-heading">Submitted Information</h2>
+					<p class="thankyou-intro">Please review the information below.</p>
+					<dl class="submission-details">
+						<div><dt>First Name</dt><dd id="submitted-first-name">—</dd></div>
+						<div><dt>Last Name</dt><dd id="submitted-last-name">—</dd></div>
+						<div><dt>Email</dt><dd id="submitted-email">—</dd></div>
+						<div><dt>Phone</dt><dd id="submitted-phone">—</dd></div>
+						<div><dt>Business / Organization</dt><dd id="submitted-organization">—</dd></div>
+						<div><dt>Application Timestamp</dt><dd id="submitted-timestamp">—</dd></div>
+					</dl>
+					<a class="return-link" href="join.html">Return to Join Page</a>
+				</section>
+			</div>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<section class="footer-contact" aria-labelledby="contact-heading">
+					<h2 id="contact-heading">Warri Chamber of Commerce</h2>
+					<p>14 Commerce Avenue<br>Warri, Delta State, Nigeria</p>
+					<p><a href="mailto:info@warrichamber.example">info@warrichamber.example</a><br><a href="tel:+2348035550199">+234 803 555 0199</a></p>
+				</section>
+				<section class="social" aria-label="Social media links">
+					<a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+					<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+					<a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+				</section>
+				<section class="footer-development" aria-labelledby="development-heading">
+					<h2 id="development-heading">WDD231 Class Project</h2>
+					<p>Duru Rowland</p>
+					<p>© <span id="current-year"></span> Warri Chamber of Commerce</p>
+					<p>Last Modification: <span id="last-modified"></span></p>
+				</section>
+			</div>
+		</footer>
+	</body>
+</html>

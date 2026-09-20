@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Join the Warri Chamber of Commerce and connect your business with local customers, partners, and opportunities in Warri, Delta State, Nigeria.">
+		<meta name="author" content="Duru Rowland">
+
+		<meta property="og:title" content="Warri Chamber of Commerce | Join">
+		<meta property="og:description" content="Explore Chamber membership levels and join the Warri Chamber of Commerce.">
+		<meta property="og:image" content="https://numinousc.github.io/wdd231/chamber/images/og-directory.jpg">
+		<meta property="og:url" content="https://numinousc.github.io/wdd231/chamber/join.html">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Warri Chamber of Commerce">
+
+		<title>Warri Chamber of Commerce | Join</title>
+
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css">
+		<link rel="stylesheet" href="styles/join.css">
+
+		<script src="scripts/navigation.js" defer></script>
+		<script src="scripts/date.js" defer></script>
+		<script src="scripts/join.js" defer></script>
+	</head>
+
+	<body>
+		<header class="site-header">
+			<div class="header-inner">
+				<a class="brand" href="index.html" aria-label="Warri Chamber of Commerce home">
+					<img src="images/favicon.svg" alt="" width="44" height="44">
+					<span>Warri Chamber of Commerce</span>
+				</a>
+
+				<div class="header-actions">
+					<button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode" aria-pressed="false">◐</button>
+					<button id="menu-button" class="icon-button menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
+				</div>
+
+				<nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+					<a href="index.html">Home</a>
+					<a href="directory.html">Directory</a>
+					<a class="active" href="join.html" aria-current="page">Join</a>
+					<a href="discover.html">Discover</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<div class="page-container join-container">
+				<header class="page-heading join-heading">
+					<div>
+						<p class="eyebrow">BECOME A MEMBER</p>
+						<h1>Join the Chamber</h1>
+					</div>
+					<p class="intro">Connect your business with local customers, partners, and opportunities across Warri. Choose a membership level and send us your details.</p>
+				</header>
+
+				<div class="join-layout">
+					<section class="join-form-section" aria-labelledby="application-heading">
+						<div class="section-heading">
+							<p class="eyebrow">MEMBERSHIP APPLICATION</p>
+							<h2 id="application-heading">Tell us about you</h2>
+						</div>
+
+						<form class="join-form" method="get" action="thankyou.html">
+							<label for="first-name">
+								First Name
+								<input type="text" id="first-name" name="firstName" title="Enter your first name." autocomplete="given-name" required>
+							</label>
+
+							<label for="last-name">
+								Last Name
+								<input type="text" id="last-name" name="lastName" title="Enter your last name." autocomplete="family-name" required>
+							</label>
+
+							<label for="organization-title">
+								Organizational Title
+								<input type="text" id="organization-title" name="organizationTitle" title="Enter your organizational title using at least 7 letters, spaces, or hyphens." autocomplete="organization-title" pattern="[A-Za-z -]{7,}">
+							</label>
+
+							<label for="email">
+								Email Address
+								<input type="email" id="email" name="email" title="Enter your email address." autocomplete="email" placeholder="example@email.com" required>
+							</label>
+
+							<label for="phone">
+								Mobile Phone
+								<input type="tel" id="phone" name="phone" title="Enter your mobile phone number." autocomplete="tel" required>
+							</label>
+
+							<label for="organization">
+								Business / Organization Name
+								<input type="text" id="organization" name="organization" title="Enter your business or organization name." autocomplete="organization" required>
+							</label>
+
+							<fieldset class="membership-fieldset">
+								<legend>Membership Level</legend>
+								<label><input type="radio" name="membership" value="np" required> NP Membership</label>
+								<label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+								<label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+								<label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+							</fieldset>
+
+							<label for="description">
+								Business / Organization Description
+								<textarea id="description" name="description" title="Describe your business or organization." rows="6"></textarea>
+							</label>
+
+							<input type="hidden" id="timestamp" name="timestamp">
+
+							<input class="submit-button" type="submit" value="Submit Membership Application">
+						</form>
+					</section>
+
+					<section class="membership-section" aria-labelledby="levels-heading">
+						<div class="section-heading">
+							<p class="eyebrow">MEMBERSHIP OPTIONS</p>
+							<h2 id="levels-heading">Choose your level</h2>
+						</div>
+
+						<div class="membership-grid">
+							<article class="membership-card membership-np">
+								<p class="membership-label">COMMUNITY</p>
+								<h3>NP Membership</h3>
+								<p>For nonprofit organizations that want to connect with the local business community.</p>
+								<button class="info-button" type="button" data-dialog="np-dialog">View Benefits</button>
+							</article>
+
+							<article class="membership-card membership-bronze">
+								<p class="membership-label">ESSENTIAL</p>
+								<h3>Bronze Membership</h3>
+								<p>A practical starting point for businesses building local visibility and connections.</p>
+								<button class="info-button" type="button" data-dialog="bronze-dialog">View Benefits</button>
+							</article>
+
+							<article class="membership-card membership-silver">
+								<p class="membership-label">GROWTH</p>
+								<h3>Silver Membership</h3>
+								<p>More opportunities to promote your business and participate in Chamber activities.</p>
+								<button class="info-button" type="button" data-dialog="silver-dialog">View Benefits</button>
+							</article>
+
+							<article class="membership-card membership-gold">
+								<p class="membership-label">PREMIUM</p>
+								<h3>Gold Membership</h3>
+								<p>Expanded visibility and engagement opportunities for established organizations.</p>
+								<button class="info-button" type="button" data-dialog="gold-dialog">View Benefits</button>
+							</article>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+
+		<dialog id="np-dialog" class="membership-dialog" aria-labelledby="np-dialog-title">
+			<div class="dialog-content">
+				<h2 id="np-dialog-title">NP Membership Benefits</h2>
+				<ul><li>Community-focused membership</li><li>Access to Chamber networking opportunities</li><li>Opportunity to participate in community activities</li></ul>
+				<button class="dialog-close" type="button">Close</button>
+			</div>
+		</dialog>
+
+		<dialog id="bronze-dialog" class="membership-dialog" aria-labelledby="bronze-dialog-title">
+			<div class="dialog-content">
+				<h2 id="bronze-dialog-title">Bronze Membership Benefits</h2>
+				<ul><li>Chamber networking opportunities</li><li>Business directory listing</li><li>Access to selected Chamber activities</li></ul>
+				<button class="dialog-close" type="button">Close</button>
+			</div>
+		</dialog>
+
+		<dialog id="silver-dialog" class="membership-dialog" aria-labelledby="silver-dialog-title">
+			<div class="dialog-content">
+				<h2 id="silver-dialog-title">Silver Membership Benefits</h2>
+				<ul><li>All Bronze membership benefits</li><li>Additional promotional opportunities</li><li>Greater participation in Chamber events</li></ul>
+				<button class="dialog-close" type="button">Close</button>
+			</div>
+		</dialog>
+
+		<dialog id="gold-dialog" class="membership-dialog" aria-labelledby="gold-dialog-title">
+			<div class="dialog-content">
+				<h2 id="gold-dialog-title">Gold Membership Benefits</h2>
+				<ul><li>All Silver membership benefits</li><li>Expanded business visibility opportunities</li><li>Priority opportunities for selected Chamber promotions and events</li></ul>
+				<button class="dialog-close" type="button">Close</button>
+			</div>
+		</dialog>
+
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<section class="footer-contact" aria-labelledby="contact-heading">
+					<h2 id="contact-heading">Warri Chamber of Commerce</h2>
+					<p>14 Commerce Avenue<br>Warri, Delta State, Nigeria</p>
+					<p><a href="mailto:info@warrichamber.example">info@warrichamber.example</a><br><a href="tel:+2348035550199">+234 803 555 0199</a></p>
+				</section>
+
+				<section class="social" aria-label="Social media links">
+					<a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+					<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+					<a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+				</section>
+
+				<section class="footer-development" aria-labelledby="development-heading">
+					<h2 id="development-heading">WDD231 Class Project</h2>
+					<p>Duru Rowland</p>
+					<p>© <span id="current-year"></span> Warri Chamber of Commerce</p>
+					<p>Last Modification: <span id="last-modified"></span></p>
+				</section>
+			</div>
+		</footer>
+	</body>
+</html>
