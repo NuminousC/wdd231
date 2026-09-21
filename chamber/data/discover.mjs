@@ -19,7 +19,7 @@ export const discoverItems = [
 	},
 	{
 		id: "nana",
-		title: "Nana Living History Museum",
+		title: "Nana Museum",
 		address: "Koko, Warri North LGA, Delta State, Nigeria",
 		description: "The Nana Living History Museum occupies the former palace of Chief Nana Olomu in Koko. Its collections and historic setting provide a window into trade, culture, and the colonial-era history of the Niger Delta.",
 		image: "business-corridor.webp",
@@ -37,7 +37,7 @@ export const discoverItems = [
 	},
 	{
 		id: "stadium",
-		title: "Warri Township Stadium",
+		title: "Warri Stadium",
 		address: "Cemetery Road, Agbasa, Warri, Delta State, Nigeria",
 		description: "Warri Township Stadium is a major sports venue in the city. It has hosted football and athletics events and has served as a venue for major sporting competitions in Nigeria.",
 		image: "warri-road-network.webp",
@@ -46,7 +46,7 @@ export const discoverItems = [
 	},
 	{
 		id: "royal-cemetery",
-		title: "Warri Kingdom Royal Cemetery",
+		title: "Warri Cemetery",
 		address: "Ijala, Warri, Delta State, Nigeria",
 		description: "The Warri Kingdom Royal Cemetery is a historic burial ground associated with past Olus of Warri. Its tree-filled setting gives the site a distinctive cultural and natural character.",
 		image: "niger-delta-horizon.webp",
@@ -55,7 +55,7 @@ export const discoverItems = [
 	},
 	{
 		id: "mangrove",
-		title: "Red Mangrove Swamp",
+		title: "Mangrove Swamp",
 		address: "Near Abraka Golf Course, Delta State, Nigeria",
 		description: "The Red Mangrove Swamp highlights the wetland environment around the Warri area. Local guides and canoe trips provide ways to experience the mangrove vegetation and waterways.",
 		image: "urban-waterfront.webp",
