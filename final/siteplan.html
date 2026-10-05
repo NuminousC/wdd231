@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Website planning document for The Beginner Developer Glossary, a WDD231 final project."
+    />
+
+    <meta name="author" content="Duru Rowland" />
+
+    <title>Site Plan | The Beginner Developer Glossary</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/siteplan.css" />
+  </head>
+
+  <body>
+    <header class="plan-header">
+      <p class="eyebrow">WDD231 Final Project</p>
+      <h1>Site Plan: The Beginner Developer Glossary</h1>
+    </header>
+
+    <main>
+      <!-- Site Name -->
+      <section aria-labelledby="site-name-heading">
+        <h2 id="site-name-heading">Site Name</h2>
+
+        <p class="site-name-display">The Beginner Developer Glossary</p>
+
+        <p>
+          This name directly describes what the site does and who it is
+          for &mdash; a glossary built specifically for people, including
+          myself, who are new to web development and need plain-language
+          explanations of the terms they encounter while learning.
+        </p>
+      </section>
+
+      <!-- Site Purpose -->
+      <section aria-labelledby="site-purpose-heading">
+        <h2 id="site-purpose-heading">Site Purpose</h2>
+
+        <p>
+          The site provides a searchable, filterable glossary of core
+          web-development terms covering HTML, CSS, JavaScript, and general
+          web fundamentals. Each term includes a plain-language definition,
+          a short example, a category, and a difficulty level. The site
+          also includes a beginner learning-path guide that shows how the
+          glossary's categories fit together, along with a form for
+          visitors to suggest new terms to add.
+        </p>
+      </section>
+
+      <!-- Scenarios -->
+      <section aria-labelledby="scenarios-heading">
+        <h2 id="scenarios-heading">Scenarios</h2>
+
+        <ul>
+          <li>
+            I keep hearing terms like &ldquo;DOM&rdquo; and
+            &ldquo;API&rdquo; in my course lectures &mdash; what do they
+            actually mean?
+          </li>
+
+          <li>
+            I want a quick definition and example without digging through a
+            whole textbook chapter &mdash; where can I find that fast?
+          </li>
+
+          <li>
+            I found a term I don&rsquo;t understand that isn&rsquo;t in the
+            glossary &mdash; how do I suggest it be added?
+          </li>
+        </ul>
+      </section>
+
+      <!-- Color Scheme -->
+      <section aria-labelledby="color-scheme-heading">
+        <h2 id="color-scheme-heading">Color Scheme</h2>
+
+        <p>
+          The palette is inspired by code editors and developer tools, to
+          give the glossary a focused, technical feel appropriate to its
+          subject matter.
+        </p>
+
+        <ul class="swatch-list">
+          <li class="swatch-item">
+            <span class="swatch swatch-navy" aria-hidden="true"></span>
+            <div>
+              <p class="swatch-label">Deep Navy &mdash; #1B2A41</p>
+              <p>Headings, header/footer background, nav text</p>
+            </div>
+          </li>
+
+          <li class="swatch-item">
+            <span class="swatch swatch-green" aria-hidden="true"></span>
+            <div>
+              <p class="swatch-label">Terminal Green &mdash; #3DDC97</p>
+              <p>
+                Buttons, links, active states, and accent borders (used on
+                dark or white backgrounds only, never as body text)
+              </p>
+            </div>
+          </li>
+
+          <li class="swatch-item">
+            <span class="swatch swatch-background" aria-hidden="true"></span>
+            <div>
+              <p class="swatch-label">Near White &mdash; #F7F9FC</p>
+              <p>Page background</p>
+            </div>
+          </li>
+
+          <li class="swatch-item">
+            <span class="swatch swatch-text" aria-hidden="true"></span>
+            <div>
+              <p class="swatch-label">Dark Slate &mdash; #1F2937</p>
+              <p>Body text</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Typography -->
+      <section aria-labelledby="typography-heading">
+        <h2 id="typography-heading">Typography</h2>
+
+        <div class="type-sample">
+          <p class="type-sample-label">
+            Space Grotesk &mdash; headings
+          </p>
+          <p class="type-sample-heading">Understand the words behind the web.</p>
+        </div>
+
+        <div class="type-sample">
+          <p class="type-sample-label">Inter &mdash; body text</p>
+          <p class="type-sample-body">
+            Web development comes with hundreds of unfamiliar terms. The
+            Beginner Developer Glossary provides simple explanations of
+            essential concepts so beginners can understand what they
+            encounter while learning to build for the web.
+          </p>
+        </div>
+
+        <div class="type-sample">
+          <p class="type-sample-label">
+            JetBrains Mono &mdash; code examples within glossary cards
+          </p>
+          <pre class="type-sample-code"><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></pre>
+        </div>
+      </section>
+
+      <!-- Wireframe -->
+      <section aria-labelledby="wireframe-heading">
+        <h2 id="wireframe-heading">Wireframe</h2>
+
+        <p>
+          The home page layout is sketched below at both a small (mobile)
+          and large (desktop) viewport, focused on structure and content
+          placement rather than visual styling.
+        </p>
+
+        <figure>
+          <img
+            src="images/wireframe-mobile.png"
+            alt="Hand-drawn black and white wireframe sketch of The Beginner Developer Glossary home page on a small screen"
+            width="320"
+            height="640"
+          />
+          <figcaption>Home page wireframe &mdash; small screen</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="images/wireframe-desktop.png"
+            alt="Hand-drawn black and white wireframe sketch of The Beginner Developer Glossary home page on a large screen"
+            width="800"
+            height="500"
+          />
+          <figcaption>Home page wireframe &mdash; large screen</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="plan-footer">
+      <p>The Beginner Developer Glossary &mdash; Site Plan</p>
+      <p>Duru Rowland &mdash; WDD231</p>
+    </footer>
+  </body>
+</html>
