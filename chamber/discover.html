@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+		content="Discover places, landmarks, natural features, and cultural attractions around Warri, Delta State, Nigeria.">
+	<meta name="author" content="Duru Rowland">
+
+	<meta property="og:title" content="Warri Chamber of Commerce | Discover Warri">
+	<meta property="og:description"
+		content="Explore representative places, landmarks, natural features, and cultural attractions around Warri, Delta State.">
+	<meta property="og:image" content="https://numinousc.github.io/wdd231/chamber/images/og-directory.jpg">
+	<meta property="og:url" content="https://numinousc.github.io/wdd231/chamber/discover.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Warri Chamber of Commerce">
+
+	<title>Warri Chamber of Commerce | Discover Warri</title>
+
+	<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/small.css">
+	<link rel="stylesheet" href="styles/larger.css">
+	<link rel="stylesheet" href="styles/discover.css">
+
+	<script src="scripts/navigation.js" defer></script>
+	<script src="scripts/date.js" defer></script>
+	<script type="module" src="scripts/discover.js"></script>
+</head>
+
+<body>
+	<header class="site-header">
+		<div class="header-inner">
+			<a class="brand" href="index.html" aria-label="Warri Chamber of Commerce home">
+				<img src="images/favicon.svg" alt="" width="44" height="44">
+				<span>Warri Chamber of Commerce</span>
+			</a>
+
+			<div class="header-actions">
+				<button id="theme-toggle" class="icon-button" type="button" aria-label="Switch to dark mode"
+					aria-pressed="false">◐</button>
+				<button id="menu-button" class="icon-button menu-button" type="button" aria-label="Open navigation menu"
+					aria-expanded="false" aria-controls="primary-navigation">☰</button>
+			</div>
+
+			<nav id="primary-navigation" class="site-nav" aria-label="Primary navigation">
+				<a href="index.html">Home</a>
+				<a href="directory.html">Directory</a>
+				<a href="join.html">Join</a>
+				<a class="active" href="discover.html" aria-current="page">Discover</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="page-container discover-container">
+			<header class="page-heading discover-heading">
+				<div>
+					<p class="eyebrow">EXPLORE THE AREA</p>
+					<h1>Discover Warri</h1>
+				</div>
+				<p class="intro">Explore places, cultural landmarks, and commercial gateways that help tell the story of Warri
+					and the surrounding Niger Delta.</p>
+			</header>
+
+			<p id="visit-message" class="visit-message" role="status" aria-live="polite"></p>
+
+			<section aria-labelledby="discover-heading">
+				<h2 id="discover-heading" class="visually-hidden">Places and features to discover</h2>
+				<div id="discover-gallery" class="discover-gallery"></div>
+			</section>
+		</div>
+	</main>
+
+	<dialog id="discover-dialog" class="discover-dialog" aria-labelledby="discover-dialog-title">
+		<div class="discover-dialog-content">
+			<h2 id="discover-dialog-title">Discover</h2>
+			<address id="discover-dialog-address"></address>
+			<p id="discover-dialog-description"></p>
+			<a id="discover-dialog-source" class="source-link" href="https://en.wikivoyage.org/wiki/Warri" target="_blank"
+				rel="noopener noreferrer">Source</a>
+			<br>
+			<button id="discover-dialog-close" class="discover-dialog-close" type="button">Close</button>
+		</div>
+	</dialog>
+
+	<footer class="site-footer">
+		<div class="footer-inner">
+			<section class="footer-contact" aria-labelledby="contact-heading">
+				<h2 id="contact-heading">Warri Chamber of Commerce</h2>
+				<p>14 Commerce Avenue<br>Warri, Delta State, Nigeria</p>
+				<p><a href="mailto:info@warrichamber.example">info@warrichamber.example</a><br><a href="tel:+2348035550199">+234
+						803 555 0199</a></p>
+			</section>
+
+			<section class="social" aria-label="Social media links">
+				<a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+				<a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+				<a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+			</section>
+
+			<section class="footer-development" aria-labelledby="development-heading">
+				<h2 id="development-heading">WDD231 Class Project</h2>
+				<p>Duru Rowland</p>
+				<p>© <span id="current-year"></span> Warri Chamber of Commerce</p>
+				<p>Last Modification: <span id="last-modified"></span></p>
+			</section>
+		</div>
+	</footer>
+</body>
+
+</html>

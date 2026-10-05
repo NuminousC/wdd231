@@ -1,0 +1,244 @@
+/* ------------------------------
+   Discover Page
+------------------------------ */
+
+.discover-container {
+	padding-bottom: 4rem;
+}
+
+.discover-heading {
+	margin-bottom: 1rem;
+}
+
+.visit-message {
+	margin: 0 0 1.5rem;
+	padding: 0.9rem 1rem;
+	border-left: 5px solid var(--accent);
+	border-radius: 8px;
+	background: var(--surface);
+	box-shadow: var(--shadow);
+	color: var(--primary);
+	font-weight: 600;
+}
+
+.discover-gallery {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"waterfront"
+		"garden"
+		"nana"
+		"olu-palace"
+		"stadium"
+		"royal-cemetery"
+		"mangrove"
+		"ports";
+}
+
+.discover-card {
+	min-width: 0;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-top: 5px solid var(--secondary);
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: auto auto auto 1fr auto;
+	align-content: start;
+}
+
+.discover-card h2 {
+	padding: 1rem 1rem 0.7rem;
+	color: var(--primary);
+	font-size: 1.35rem;
+	line-height: 1.1;
+}
+
+.discover-card figure {
+	margin: 0;
+	overflow: hidden;
+	background: var(--background);
+}
+
+.discover-card img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+}
+
+.discover-card address {
+	padding: 0.9rem 1rem 0;
+	color: var(--secondary);
+	font-style: normal;
+	font-weight: 600;
+}
+
+.discover-card p {
+	padding: 0.65rem 1rem 0;
+	color: var(--muted);
+}
+
+.discover-more {
+	justify-self: start;
+	margin: 1rem;
+	border: 1px solid var(--primary);
+	border-radius: 7px;
+	padding: 0.6rem 0.85rem;
+	background: transparent;
+	color: var(--primary);
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.discover-more:hover,
+.discover-more:focus-visible {
+	background: var(--primary);
+	color: #ffffff;
+	outline: none;
+}
+
+.discover-dialog {
+	width: min(620px, 92vw);
+	border: 0;
+	border-radius: 12px;
+	padding: 0;
+	background: var(--surface);
+	color: var(--text);
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+}
+
+.discover-dialog::backdrop {
+	background: rgba(11, 57, 84, 0.72);
+}
+
+.discover-dialog-content {
+	padding: 1.5rem;
+}
+
+.discover-dialog h2 {
+	color: var(--primary);
+	margin-bottom: 0.65rem;
+}
+
+.discover-dialog address {
+	color: var(--secondary);
+	font-style: normal;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.discover-dialog p {
+	color: var(--muted);
+}
+
+.discover-dialog .source-link {
+	display: inline-block;
+	margin-top: 1rem;
+	font-weight: 600;
+}
+
+.discover-dialog-close {
+	margin-top: 1.25rem;
+	border: 0;
+	border-radius: 7px;
+	padding: 0.65rem 1rem;
+	background: var(--primary);
+	color: #ffffff;
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.discover-dialog-close:hover,
+.discover-dialog-close:focus-visible {
+	background: var(--secondary);
+}
+
+/* Medium layout: named areas change the visual hierarchy rather than merely
+   increasing the number of columns. */
+@media (min-width: 641px) {
+	.discover-gallery {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-areas:
+			"waterfront waterfront nana"
+			"garden stadium stadium"
+			"olu-palace royal-cemetery mangrove"
+			"ports ports mangrove";
+	}
+}
+
+/* Large layout: named areas create a different composition again. */
+@media (min-width: 1025px) {
+	.discover-gallery {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-rows: repeat(4, minmax(170px, auto));
+		grid-template-areas:
+			"waterfront nana stadium"
+			"waterfront garden stadium"
+			"olu-palace royal-cemetery mangrove"
+			"olu-palace ports ports";
+	}
+
+	.discover-card {
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+
+	.discover-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 14px 30px rgba(11, 57, 84, 0.15);
+	}
+
+	.discover-card:hover img {
+		filter: saturate(1.12) contrast(1.04);
+	}
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+	.discover-card h2 {
+		font-size: 1.25rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.discover-card {
+		transition: none;
+	}
+}
+
+.dark .visit-message {
+	color: #ffffff;
+}
+
+.dark .discover-card h2,
+.dark .discover-dialog h2 {
+	color: #ffffff;
+}
+
+.dark .discover-more {
+	border-color: #8edbe0;
+	color: #8edbe0;
+}
+
+.dark .discover-more:hover,
+.dark .discover-more:focus-visible {
+	background: #8edbe0;
+	color: #101820;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
