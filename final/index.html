@@ -8,15 +8,31 @@
 			content="A beginner-friendly web development glossary with simple definitions, examples, and a learning path."
 		>
 		<meta name="author" content="Duru Rowland">
-		<meta property="og:title" content="The Beginner Developer Glossary | Home">
+		<meta
+			property="og:title"
+			content="The Beginner Developer Glossary | Learn Web Terms"
+		>
 		<meta
 			property="og:description"
-			content="Simple explanations for the words behind the web."
+			content="Simple explanations for the words behind the web, with examples, search, and a beginner learning path."
 		>
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="The Beginner Developer Glossary">
+		<meta
+			property="og:url"
+			content="https://numinousc.github.io/wdd231/final/index.html"
+		>
+		<meta
+			property="og:image"
+			content="https://numinousc.github.io/wdd231/final/images/og-glossary.png"
+		>
+		<meta
+			property="og:image:alt"
+			content="The Beginner Developer Glossary: understand the words behind the web."
+		>
 		<title>The Beginner Developer Glossary | Home</title>
 		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link
@@ -25,6 +41,8 @@
 		>
 		<link rel="stylesheet" href="styles/small.css">
 		<link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)">
+		<script type="module" src="scripts/main.js"></script>
+		<script type="module" src="scripts/home.js"></script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -126,10 +144,46 @@
 				</div>
 				<div
 					class="path-mini"
+					role="group"
 					aria-label="Learning path: HTML, CSS, JavaScript, Browser APIs"
 				>
-					<span>HTML</span><span>CSS</span><span>JavaScript</span
-					><span>Browser APIs</span>
+					<span
+						><img
+							class="topic-icon"
+							src="images/icon-html.svg"
+							alt="Angle brackets icon for HTML"
+							width="28"
+							height="28"
+							loading="lazy"
+						>HTML</span
+					><span
+						><img
+							class="topic-icon"
+							src="images/icon-css.svg"
+							alt="Curly braces icon for CSS"
+							width="28"
+							height="28"
+							loading="lazy"
+						>CSS</span
+					><span
+						><img
+							class="topic-icon"
+							src="images/icon-javascript.svg"
+							alt="Lightning bolt icon for JavaScript"
+							width="28"
+							height="28"
+							loading="lazy"
+						>JavaScript</span
+					><span
+						><img
+							class="topic-icon"
+							src="images/icon-api.svg"
+							alt="Two-way arrows icon for browser APIs"
+							width="28"
+							height="28"
+							loading="lazy"
+						>Browser APIs</span
+					>
 				</div>
 			</section>
 			<section
@@ -167,7 +221,5 @@
 				</div>
 			</div>
 		</footer>
-		<script type="module" src="scripts/main.js"></script>
-		<script type="module" src="scripts/home.js"></script>
 	</body>
 </html>

@@ -14,12 +14,25 @@
 		>
 		<meta
 			property="og:description"
-			content="A simple path through essential web-development concepts."
+			content="A simple path through essential web-development concepts, from HTML and CSS to JavaScript and accessibility."
 		>
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="The Beginner Developer Glossary">
+		<meta
+			property="og:url"
+			content="https://numinousc.github.io/wdd231/final/guide.html"
+		>
+		<meta
+			property="og:image"
+			content="https://numinousc.github.io/wdd231/final/images/og-glossary.png"
+		>
+		<meta
+			property="og:image:alt"
+			content="The Beginner Developer Glossary: understand the words behind the web."
+		>
 		<title>Learning Path | The Beginner Developer Glossary</title>
 		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link
@@ -28,6 +41,7 @@
 		>
 		<link rel="stylesheet" href="styles/small.css">
 		<link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)">
+		<script type="module" src="scripts/main.js"></script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -80,7 +94,16 @@
 					<li>
 						<span class="path-number">01</span>
 						<div>
-							<h3>HTML: Structure</h3>
+							<h3>
+								<img
+									class="topic-icon"
+									src="images/icon-html.svg"
+									alt="Angle brackets icon for HTML"
+									width="28"
+									height="28"
+									loading="lazy"
+								>HTML: Structure
+							</h3>
 							<p>Learn how semantic HTML gives a page structure and meaning.</p>
 							<a href="glossary.html?q=HTML">Explore HTML terms →</a>
 						</div>
@@ -88,7 +111,16 @@
 					<li>
 						<span class="path-number">02</span>
 						<div>
-							<h3>CSS: Presentation</h3>
+							<h3>
+								<img
+									class="topic-icon"
+									src="images/icon-css.svg"
+									alt="Curly braces icon for CSS"
+									width="28"
+									height="28"
+									loading="lazy"
+								>CSS: Presentation
+							</h3>
 							<p>
 								Use CSS to control layout, spacing, typography, and responsive
 								presentation.
@@ -99,7 +131,16 @@
 					<li>
 						<span class="path-number">03</span>
 						<div>
-							<h3>JavaScript: Behavior</h3>
+							<h3>
+								<img
+									class="topic-icon"
+									src="images/icon-javascript.svg"
+									alt="Lightning bolt icon for JavaScript"
+									width="28"
+									height="28"
+									loading="lazy"
+								>JavaScript: Behavior
+							</h3>
 							<p>
 								Use programming logic and events to make pages respond to users.
 							</p>
@@ -111,7 +152,16 @@
 					<li>
 						<span class="path-number">04</span>
 						<div>
-							<h3>Browser APIs &amp; Data</h3>
+							<h3>
+								<img
+									class="topic-icon"
+									src="images/icon-api.svg"
+									alt="Two-way arrows icon for browser APIs"
+									width="28"
+									height="28"
+									loading="lazy"
+								>Browser APIs &amp; Data
+							</h3>
 							<p>
 								Connect your interface to data, storage, the DOM, and
 								asynchronous browser features.
@@ -122,7 +172,16 @@
 					<li>
 						<span class="path-number">05</span>
 						<div>
-							<h3>Accessibility &amp; Responsive Design</h3>
+							<h3>
+								<img
+									class="topic-icon"
+									src="images/icon-accessibility.svg"
+									alt="Person icon for accessibility"
+									width="28"
+									height="28"
+									loading="lazy"
+								>Accessibility &amp; Responsive Design
+							</h3>
 							<p>
 								Build interfaces that work across devices and remain usable by
 								people with different needs.
@@ -214,6 +273,5 @@
 				</div>
 			</div>
 		</footer>
-		<script type="module" src="scripts/main.js"></script>
 	</body>
 </html>

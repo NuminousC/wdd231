@@ -49,6 +49,13 @@ select,
 textarea {
 	font: inherit;
 }
+button {
+	cursor: pointer;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
 a {
 	color: var(--navy);
 }
@@ -109,7 +116,6 @@ p {
 	color: #10251d;
 	font-weight: 700;
 	text-decoration: none;
-	cursor: pointer;
 }
 .button:hover,
 .button:focus-visible {
@@ -146,6 +152,14 @@ p {
 	line-height: 1.1;
 	text-decoration: none;
 }
+.brand-mark,
+.code-window,
+.term-card .term-example,
+.path-mini span,
+.dialog-example code,
+.path-number {
+	font-family: "JetBrains Mono", monospace;
+}
 .brand-mark {
 	display: grid;
 	place-items: center;
@@ -155,7 +169,6 @@ p {
 	border-radius: 9px;
 	background: var(--panel);
 	color: var(--green);
-	font-family: "JetBrains Mono", monospace;
 }
 .header-actions {
 	display: flex;
@@ -170,7 +183,6 @@ p {
 	border-radius: 8px;
 	background: var(--surface);
 	color: var(--navy);
-	cursor: pointer;
 }
 .site-nav {
 	position: absolute;
@@ -249,12 +261,18 @@ p {
 	color: #10251d;
 	padding: 0 1.1rem;
 	font-weight: 700;
-	cursor: pointer;
 }
 .hero-visual {
 	min-height: 220px;
 	display: grid;
 	place-items: center;
+}
+.code-window,
+.term-card .term-example,
+.dialog-example pre,
+.site-footer {
+	background: var(--panel);
+	color: #fff;
 }
 .code-window {
 	width: min(100%, 430px);
@@ -264,10 +282,7 @@ p {
 	align-content: center;
 	gap: 0.25rem;
 	border-radius: 18px;
-	background: var(--panel);
-	color: #fff;
 	box-shadow: var(--shadow);
-	font-family: "JetBrains Mono", monospace;
 	font-size: 1.25rem;
 }
 .code-window .code-accent {
@@ -281,16 +296,26 @@ p {
 	display: grid;
 	gap: 1rem;
 }
+.term-card,
+.learning-preview,
+.suggest-panel,
+.glossary-tools,
+.learning-path li,
+.suggest-form,
+.success-panel,
+.info-panel,
+.plain-page {
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	background: var(--surface);
+	box-shadow: var(--shadow);
+}
 .term-card {
 	position: relative;
 	display: grid;
 	gap: 0.7rem;
 	min-height: 260px;
 	padding: 1rem;
-	border: 1px solid var(--border);
-	border-radius: var(--radius);
-	background: var(--surface);
-	box-shadow: var(--shadow);
 }
 .term-card h3 {
 	margin-right: 2.5rem;
@@ -302,14 +327,8 @@ p {
 .term-card .term-example {
 	padding: 0.7rem;
 	border-radius: 7px;
-	background: var(--panel);
-	color: #fff;
-	font-family: "JetBrains Mono", monospace;
 	font-size: 0.78rem;
 	overflow-x: auto;
-}
-.term-card .term-example code {
-	color: #fff;
 }
 .card-actions {
 	display: flex;
@@ -325,7 +344,6 @@ p {
 	color: var(--navy);
 	padding: 0.5rem 0.7rem;
 	font-weight: 700;
-	cursor: pointer;
 }
 .favorite-button.is-favorite {
 	border-color: var(--green);
@@ -342,8 +360,8 @@ p {
 	font-size: 0.78rem;
 	font-weight: 700;
 }
-.card-category {
-	color: var(--accent-text) !important;
+.term-card .card-category {
+	color: var(--accent-text);
 	font-size: 0.78rem;
 	font-weight: 700;
 	letter-spacing: 0.08em;
@@ -362,10 +380,6 @@ p {
 	padding: 2rem;
 	display: grid;
 	gap: 1.5rem;
-	border: 1px solid var(--border);
-	border-radius: var(--radius);
-	background: var(--surface);
-	box-shadow: var(--shadow);
 }
 .path-mini {
 	display: grid;
@@ -377,7 +391,6 @@ p {
 	border-radius: 7px;
 	background: var(--background);
 	text-align: center;
-	font-family: "JetBrains Mono", monospace;
 	font-weight: 600;
 }
 .path-mini span:not(:last-child)::after {
@@ -397,10 +410,6 @@ p {
 .glossary-tools {
 	margin-bottom: 2rem;
 	padding: 1.2rem;
-	border: 1px solid var(--border);
-	border-radius: var(--radius);
-	background: var(--surface);
-	box-shadow: var(--shadow);
 }
 .search-field,
 .filter-row label,
@@ -422,7 +431,6 @@ p {
 	background: transparent;
 	color: var(--navy);
 	font-weight: 700;
-	cursor: pointer;
 }
 .filter-button[aria-pressed="true"] {
 	border-color: var(--green);
@@ -460,7 +468,6 @@ p {
 	background: var(--surface);
 	color: var(--navy);
 	font-size: 1.5rem;
-	cursor: pointer;
 }
 .dialog-definition,
 .dialog-example {
@@ -471,12 +478,10 @@ p {
 	padding: 1rem;
 	overflow-x: auto;
 	border-radius: 8px;
-	background: var(--panel);
-	color: #fff;
 }
-.dialog-example code {
-	font-family: "JetBrains Mono", monospace;
-	color: #fff;
+.topic-icon {
+	vertical-align: middle;
+	margin-right: 0.5rem;
 }
 .path-section {
 	padding-block: 1rem 3rem;
@@ -493,10 +498,6 @@ p {
 	grid-template-columns: 56px 1fr;
 	gap: 1rem;
 	padding: 1.2rem;
-	border: 1px solid var(--border);
-	border-radius: var(--radius);
-	background: var(--surface);
-	box-shadow: var(--shadow);
 }
 .path-number {
 	display: grid;
@@ -506,7 +507,6 @@ p {
 	border-radius: 50%;
 	background: var(--panel);
 	color: var(--green);
-	font-family: "JetBrains Mono", monospace;
 	font-weight: 700;
 }
 .learning-path a {
@@ -527,10 +527,6 @@ p {
 	display: grid;
 	gap: 1rem;
 	padding: 1.5rem;
-	border: 1px solid var(--border);
-	border-radius: var(--radius);
-	background: var(--surface);
-	box-shadow: var(--shadow);
 }
 .suggest-form textarea {
 	resize: vertical;
@@ -542,10 +538,6 @@ p {
 .info-panel,
 .plain-page {
 	padding: 2rem;
-	border: 1px solid var(--border);
-	border-radius: var(--radius);
-	background: var(--surface);
-	box-shadow: var(--shadow);
 }
 .submission-details {
 	display: grid;
@@ -579,8 +571,6 @@ p {
 	margin-top: 2rem;
 	padding: 2rem 0;
 	border-top: 4px solid var(--green);
-	background: var(--panel);
-	color: #fff;
 }
 .footer-inner {
 	width: min(var(--max-width), 92%);
