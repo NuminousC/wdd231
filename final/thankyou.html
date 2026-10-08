@@ -1,4 +1,105 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Confirmation page for a submitted glossary term suggestion."><meta name="author" content="Duru Rowland"><title>Suggestion Received | The Beginner Developer Glossary</title><link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles/small.css"><link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)"></head><body>
-<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>The Beginner Developer Glossary</span></a><div class="header-actions"><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">◐</button><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">☰</button></div><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="guide.html">Learning Path</a></nav></div></header>
-<main class="page-container action-page"><section class="success-panel" aria-labelledby="thankyou-heading"><p class="eyebrow">Suggestion received</p><h1 id="thankyou-heading">Thanks for helping the glossary grow.</h1><p>Your suggestion details are shown below.</p><dl class="submission-details"><div><dt>Name</dt><dd id="submitted-name"></dd></div><div><dt>Email</dt><dd id="submitted-email"></dd></div><div><dt>Suggested term</dt><dd id="submitted-term"></dd></div><div><dt>Reason</dt><dd id="submitted-reason"></dd></div></dl><a class="button" href="index.html">Return home</a></section></main>
-<footer class="site-footer"><div class="footer-inner"><div><strong>The Beginner Developer Glossary</strong><p>Simple explanations for the words behind the web.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="guide.html">Learning Path</a><a href="attributions.html">Attributions</a><a href="video.html">Project Demonstration</a></nav><div class="footer-meta"><p>© <span id="current-year"></span> The Beginner Developer Glossary</p><p>Last modified: <span id="last-modified"></span></p></div></div></footer><script type="module" src="scripts/main.js"></script><script type="module" src="scripts/form.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta
+			name="description"
+			content="Confirmation page for a submitted glossary term suggestion."
+		>
+		<meta name="author" content="Duru Rowland">
+		<title>Suggestion Received | The Beginner Developer Glossary</title>
+		<meta
+			property="og:title"
+			content="Suggestion Received | The Beginner Developer Glossary"
+		>
+		<meta
+			property="og:description"
+			content="Confirmation page for a submitted glossary term suggestion."
+		>
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="The Beginner Developer Glossary">
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-inner">
+				<a class="brand" href="index.html"
+					><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span
+					><span>The Beginner Developer Glossary</span></a
+				>
+				<div class="header-actions">
+					<button
+						class="theme-toggle"
+						type="button"
+						aria-pressed="false"
+						aria-label="Switch to dark mode"
+					>
+						◐
+					</button><button
+						class="menu-button"
+						type="button"
+						aria-expanded="false"
+						aria-controls="site-nav"
+					>
+						☰
+					</button>
+				</div>
+				<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+					<a href="index.html">Home</a><a href="glossary.html">Glossary</a
+					><a href="guide.html">Learning Path</a>
+				</nav>
+			</div>
+		</header>
+		<main class="page-container action-page">
+			<section class="success-panel" aria-labelledby="thankyou-heading">
+				<p class="eyebrow">Suggestion received</p>
+				<h1 id="thankyou-heading">Thanks for helping the glossary grow.</h1>
+				<p>Your suggestion details are shown below.</p>
+				<dl class="submission-details">
+					<div>
+						<dt>Name</dt>
+						<dd id="submitted-name"></dd>
+					</div>
+					<div>
+						<dt>Email</dt>
+						<dd id="submitted-email"></dd>
+					</div>
+					<div>
+						<dt>Suggested term</dt>
+						<dd id="submitted-term"></dd>
+					</div>
+					<div>
+						<dt>Reason</dt>
+						<dd id="submitted-reason"></dd>
+					</div>
+				</dl>
+				<a class="button" href="index.html">Return home</a>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<div>
+					<strong>The Beginner Developer Glossary</strong>
+					<p>Simple explanations for the words behind the web.</p>
+				</div>
+				<nav class="footer-nav" aria-label="Footer navigation">
+					<a href="index.html">Home</a><a href="glossary.html">Glossary</a
+					><a href="guide.html">Learning Path</a
+					><a href="attributions.html">Attributions</a
+					><a href="video.html">Project Demonstration</a>
+				</nav>
+				<div class="footer-meta">
+					<p>
+						© <span id="current-year"></span> The Beginner Developer Glossary
+					</p>
+					<p>Last modified: <span id="last-modified"></span></p>
+				</div>
+			</div>
+		</footer>
+		<script type="module" src="scripts/main.js"></script>
+		<script type="module" src="scripts/form.js"></script>
+	</body>
+</html>

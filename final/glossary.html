@@ -1,6 +1,170 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Search and filter beginner-friendly definitions of HTML, CSS, JavaScript, browser, accessibility, and web-development terms."><meta name="author" content="Duru Rowland"><meta property="og:title" content="Glossary | The Beginner Developer Glossary"><meta property="og:description" content="Search and filter beginner-friendly web-development terms."><meta property="og:type" content="website"><meta property="og:site_name" content="The Beginner Developer Glossary"><title>Glossary | The Beginner Developer Glossary</title><link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles/small.css"><link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)"></head><body>
-<header class="site-header"><div class="header-inner"><a class="brand" href="index.html" aria-label="The Beginner Developer Glossary home"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>The Beginner Developer Glossary</span></a><div class="header-actions"><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">◐</button><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">☰ <span class="visually-hidden">Menu</span></button></div><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="glossary.html" aria-current="page">Glossary</a><a href="guide.html">Learning Path</a></nav></div></header>
-<main><section class="page-container page-heading"><p class="eyebrow">Reference</p><h1>Glossary</h1><p>Search, filter, and explore essential web-development vocabulary. Select a card to read the full definition and example.</p></section><section class="page-container glossary-tools" aria-labelledby="tools-heading"><h2 id="tools-heading" class="visually-hidden">Glossary filters</h2><label class="search-field"><span>Search terms</span><input id="glossary-search" type="search" placeholder="Try DOM, CSS, or API..." autocomplete="off"></label><div class="filter-row"><label><span>Category</span><select id="category-filter"><option value="all">All categories</option></select></label><label><span>Difficulty</span><select id="difficulty-filter"><option value="all">All levels</option><option value="Beginner">Beginner</option><option value="Intermediate">Intermediate</option></select></label><button id="favorites-toggle" class="filter-button" type="button" aria-pressed="false">☆ Favorites only</button></div><p id="result-count" class="result-count" aria-live="polite"></p></section><section class="page-container" aria-labelledby="results-heading"><h2 id="results-heading" class="visually-hidden">Glossary results</h2><div class="term-grid glossary-grid" id="glossary-grid" aria-live="polite"></div></section></main>
-<dialog id="term-dialog" class="term-dialog" aria-labelledby="dialog-title"><div class="dialog-inner"><button id="dialog-close" class="dialog-close" type="button" aria-label="Close term details">×</button><p id="dialog-category" class="eyebrow"></p><h2 id="dialog-title"></h2><p id="dialog-difficulty" class="badge"></p><div class="dialog-definition"><h3>Definition</h3><p id="dialog-definition-text"></p></div><div class="dialog-example"><h3>Example</h3><pre><code id="dialog-example-text"></code></pre></div><button id="dialog-favorite" class="button" type="button"></button></div></dialog>
-<footer class="site-footer"><div class="footer-inner"><div><strong>The Beginner Developer Glossary</strong><p>Simple explanations for the words behind the web.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="guide.html">Learning Path</a><a href="attributions.html">Attributions</a><a href="video.html">Project Demonstration</a></nav><div class="footer-meta"><p>© <span id="current-year"></span> The Beginner Developer Glossary</p><p>Last modified: <span id="last-modified"></span></p></div></div></footer>
-<script type="module" src="scripts/main.js"></script><script type="module" src="scripts/modal.js"></script><script type="module" src="scripts/glossary.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta
+			name="description"
+			content="Search and filter beginner-friendly definitions of HTML, CSS, JavaScript, browser, accessibility, and web-development terms."
+		>
+		<meta name="author" content="Duru Rowland">
+		<meta
+			property="og:title"
+			content="Glossary | The Beginner Developer Glossary"
+		>
+		<meta
+			property="og:description"
+			content="Search and filter beginner-friendly web-development terms."
+		>
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="The Beginner Developer Glossary">
+		<title>Glossary | The Beginner Developer Glossary</title>
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap"
+			rel="stylesheet"
+		>
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-inner">
+				<a
+					class="brand"
+					href="index.html"
+					aria-label="The Beginner Developer Glossary home"
+					><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span
+					><span>The Beginner Developer Glossary</span></a
+				>
+				<div class="header-actions">
+					<button
+						class="theme-toggle"
+						type="button"
+						aria-pressed="false"
+						aria-label="Switch to dark mode"
+					>
+						◐
+					</button><button
+						class="menu-button"
+						type="button"
+						aria-expanded="false"
+						aria-controls="site-nav"
+					>
+						☰ <span class="visually-hidden">Menu</span>
+					</button>
+				</div>
+				<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+					<a href="index.html">Home</a
+					><a href="glossary.html" aria-current="page">Glossary</a
+					><a href="guide.html">Learning Path</a>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="page-container page-heading">
+				<p class="eyebrow">Reference</p>
+				<h1>Glossary</h1>
+				<p>
+					Search, filter, and explore essential web-development vocabulary.
+					Select a card to read the full definition and example.
+				</p>
+			</section>
+			<section
+				class="page-container glossary-tools"
+				aria-labelledby="tools-heading"
+			>
+				<h2 id="tools-heading" class="visually-hidden">Glossary filters</h2>
+				<label class="search-field"
+					><span>Search terms</span>
+					<input
+						id="glossary-search"
+						type="search"
+						placeholder="Try DOM, CSS, or API..."
+						autocomplete="off"
+					></label
+				>
+				<div class="filter-row">
+					<label
+						><span>Category</span
+						><select id="category-filter">
+							<option value="all">All categories</option>
+						</select></label
+					><label
+						><span>Difficulty</span
+						><select id="difficulty-filter">
+							<option value="all">All levels</option>
+							<option value="Beginner">Beginner</option>
+							<option value="Intermediate">Intermediate</option>
+						</select></label
+					><button
+						id="favorites-toggle"
+						class="filter-button"
+						type="button"
+						aria-pressed="false"
+					>
+						☆ Favorites only
+					</button>
+				</div>
+				<p id="result-count" class="result-count" aria-live="polite"></p>
+			</section>
+			<section class="page-container" aria-labelledby="results-heading">
+				<h2 id="results-heading" class="visually-hidden">Glossary results</h2>
+				<div
+					class="term-grid glossary-grid"
+					id="glossary-grid"
+					aria-live="polite"
+				></div>
+			</section>
+		</main>
+		<dialog id="term-dialog" class="term-dialog" aria-labelledby="dialog-title">
+			<div class="dialog-inner">
+				<button
+					id="dialog-close"
+					class="dialog-close"
+					type="button"
+					aria-label="Close term details"
+				>
+					×
+				</button>
+				<p id="dialog-category" class="eyebrow"></p>
+				<h2 id="dialog-title"></h2>
+				<p id="dialog-difficulty" class="badge"></p>
+				<div class="dialog-definition">
+					<h3>Definition</h3>
+					<p id="dialog-definition-text"></p>
+				</div>
+				<div class="dialog-example">
+					<h3>Example</h3>
+					<pre><code id="dialog-example-text"></code></pre>
+				</div>
+				<button id="dialog-favorite" class="button" type="button"></button>
+			</div>
+		</dialog>
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<div>
+					<strong>The Beginner Developer Glossary</strong>
+					<p>Simple explanations for the words behind the web.</p>
+				</div>
+				<nav class="footer-nav" aria-label="Footer navigation">
+					<a href="index.html">Home</a><a href="glossary.html">Glossary</a
+					><a href="guide.html">Learning Path</a
+					><a href="attributions.html">Attributions</a
+					><a href="video.html">Project Demonstration</a>
+				</nav>
+				<div class="footer-meta">
+					<p>
+						© <span id="current-year"></span> The Beginner Developer Glossary
+					</p>
+					<p>Last modified: <span id="last-modified"></span></p>
+				</div>
+			</div>
+		</footer>
+		<script type="module" src="scripts/main.js"></script>
+		<script type="module" src="scripts/modal.js"></script>
+		<script type="module" src="scripts/glossary.js"></script>
+	</body>
+</html>

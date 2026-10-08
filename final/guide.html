@@ -1,4 +1,219 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="A beginner-friendly learning path connecting HTML, CSS, JavaScript, browser APIs, accessibility, and responsive web development."><meta name="author" content="Duru Rowland"><meta property="og:title" content="Learning Path | The Beginner Developer Glossary"><meta property="og:description" content="A simple path through essential web-development concepts."><meta property="og:type" content="website"><meta property="og:site_name" content="The Beginner Developer Glossary"><title>Learning Path | The Beginner Developer Glossary</title><link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles/small.css"><link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)"></head><body>
-<header class="site-header"><div class="header-inner"><a class="brand" href="index.html" aria-label="The Beginner Developer Glossary home"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>The Beginner Developer Glossary</span></a><div class="header-actions"><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">◐</button><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">☰ <span class="visually-hidden">Menu</span></button></div><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="guide.html" aria-current="page">Learning Path</a></nav></div></header>
-<main><section class="page-container page-heading"><p class="eyebrow">Begin with the foundations</p><h1>A learning path for beginners</h1><p>The glossary is a reference. This page gives those terms a little structure so you can see how the concepts connect.</p></section><section class="page-container path-section" aria-labelledby="path-heading"><h2 id="path-heading">The path</h2><ol class="learning-path"><li><span class="path-number">01</span><div><h3>HTML: Structure</h3><p>Learn how semantic HTML gives a page structure and meaning.</p><a href="glossary.html?q=HTML">Explore HTML terms →</a></div></li><li><span class="path-number">02</span><div><h3>CSS: Presentation</h3><p>Use CSS to control layout, spacing, typography, and responsive presentation.</p><a href="glossary.html?q=CSS">Explore CSS terms →</a></div></li><li><span class="path-number">03</span><div><h3>JavaScript: Behavior</h3><p>Use programming logic and events to make pages respond to users.</p><a href="glossary.html?q=JavaScript">Explore JavaScript terms →</a></div></li><li><span class="path-number">04</span><div><h3>Browser APIs &amp; Data</h3><p>Connect your interface to data, storage, the DOM, and asynchronous browser features.</p><a href="glossary.html?q=API">Explore browser terms →</a></div></li><li><span class="path-number">05</span><div><h3>Accessibility &amp; Responsive Design</h3><p>Build interfaces that work across devices and remain usable by people with different needs.</p><a href="glossary.html?q=Accessibility">Explore accessibility terms →</a></div></li></ol></section><section class="page-container study-panel" aria-labelledby="study-heading"><p class="eyebrow">A simple study habit</p><h2 id="study-heading">Don't just memorize the word.</h2><p>When you meet an unfamiliar term, first read the definition, then look at the example, and finally try to explain the idea in your own words. If you can use the concept in a small project, you are moving from recognition toward understanding.</p></section><section class="page-container form-section" id="suggest-term" aria-labelledby="suggest-heading"><div class="form-intro"><p class="eyebrow">Contribute an idea</p><h2 id="suggest-heading">Suggest a term</h2><p>Is there a beginner-friendly web-development term missing from the glossary? Send a suggestion. This demonstration form displays the submitted data on a separate action page.</p></div><form action="thankyou.html" method="get" class="suggest-form"><label>Your name<input type="text" name="name" required autocomplete="name"></label><label>Email address<input type="email" name="email" required autocomplete="email"></label><label>Suggested term<input type="text" name="term" required minlength="2"></label><label>Why should beginners learn it?<textarea name="reason" rows="5" required minlength="10"></textarea></label><button class="button" type="submit">Submit suggestion</button></form></section></main>
-<footer class="site-footer"><div class="footer-inner"><div><strong>The Beginner Developer Glossary</strong><p>Simple explanations for the words behind the web.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="guide.html">Learning Path</a><a href="attributions.html">Attributions</a><a href="video.html">Project Demonstration</a></nav><div class="footer-meta"><p>© <span id="current-year"></span> The Beginner Developer Glossary</p><p>Last modified: <span id="last-modified"></span></p></div></div></footer><script type="module" src="scripts/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta
+			name="description"
+			content="A beginner-friendly learning path connecting HTML, CSS, JavaScript, browser APIs, accessibility, and responsive web development."
+		>
+		<meta name="author" content="Duru Rowland">
+		<meta
+			property="og:title"
+			content="Learning Path | The Beginner Developer Glossary"
+		>
+		<meta
+			property="og:description"
+			content="A simple path through essential web-development concepts."
+		>
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="The Beginner Developer Glossary">
+		<title>Learning Path | The Beginner Developer Glossary</title>
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap"
+			rel="stylesheet"
+		>
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-inner">
+				<a
+					class="brand"
+					href="index.html"
+					aria-label="The Beginner Developer Glossary home"
+					><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span
+					><span>The Beginner Developer Glossary</span></a
+				>
+				<div class="header-actions">
+					<button
+						class="theme-toggle"
+						type="button"
+						aria-pressed="false"
+						aria-label="Switch to dark mode"
+					>
+						◐
+					</button><button
+						class="menu-button"
+						type="button"
+						aria-expanded="false"
+						aria-controls="site-nav"
+					>
+						☰ <span class="visually-hidden">Menu</span>
+					</button>
+				</div>
+				<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+					<a href="index.html">Home</a><a href="glossary.html">Glossary</a
+					><a href="guide.html" aria-current="page">Learning Path</a>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="page-container page-heading">
+				<p class="eyebrow">Begin with the foundations</p>
+				<h1>A learning path for beginners</h1>
+				<p>
+					The glossary is a reference. This page gives those terms a little
+					structure so you can see how the concepts connect.
+				</p>
+			</section>
+			<section
+				class="page-container path-section"
+				aria-labelledby="path-heading"
+			>
+				<h2 id="path-heading">The path</h2>
+				<ol class="learning-path">
+					<li>
+						<span class="path-number">01</span>
+						<div>
+							<h3>HTML: Structure</h3>
+							<p>Learn how semantic HTML gives a page structure and meaning.</p>
+							<a href="glossary.html?q=HTML">Explore HTML terms →</a>
+						</div>
+					</li>
+					<li>
+						<span class="path-number">02</span>
+						<div>
+							<h3>CSS: Presentation</h3>
+							<p>
+								Use CSS to control layout, spacing, typography, and responsive
+								presentation.
+							</p>
+							<a href="glossary.html?q=CSS">Explore CSS terms →</a>
+						</div>
+					</li>
+					<li>
+						<span class="path-number">03</span>
+						<div>
+							<h3>JavaScript: Behavior</h3>
+							<p>
+								Use programming logic and events to make pages respond to users.
+							</p>
+							<a href="glossary.html?q=JavaScript"
+								>Explore JavaScript terms →</a
+							>
+						</div>
+					</li>
+					<li>
+						<span class="path-number">04</span>
+						<div>
+							<h3>Browser APIs &amp; Data</h3>
+							<p>
+								Connect your interface to data, storage, the DOM, and
+								asynchronous browser features.
+							</p>
+							<a href="glossary.html?q=API">Explore browser terms →</a>
+						</div>
+					</li>
+					<li>
+						<span class="path-number">05</span>
+						<div>
+							<h3>Accessibility &amp; Responsive Design</h3>
+							<p>
+								Build interfaces that work across devices and remain usable by
+								people with different needs.
+							</p>
+							<a href="glossary.html?q=Accessibility"
+								>Explore accessibility terms →</a
+							>
+						</div>
+					</li>
+				</ol>
+			</section>
+			<section
+				class="page-container study-panel"
+				aria-labelledby="study-heading"
+			>
+				<p class="eyebrow">A simple study habit</p>
+				<h2 id="study-heading">Don't just memorize the word.</h2>
+				<p>
+					When you meet an unfamiliar term, first read the definition, then look
+					at the example, and finally try to explain the idea in your own words.
+					If you can use the concept in a small project, you are moving from
+					recognition toward understanding.
+				</p>
+			</section>
+			<section
+				class="page-container form-section"
+				id="suggest-term"
+				aria-labelledby="suggest-heading"
+			>
+				<div class="form-intro">
+					<p class="eyebrow">Contribute an idea</p>
+					<h2 id="suggest-heading">Suggest a term</h2>
+					<p>
+						Is there a beginner-friendly web-development term missing from the
+						glossary? Send a suggestion. This demonstration form displays the
+						submitted data on a separate action page.
+					</p>
+				</div>
+				<form action="thankyou.html" method="get" class="suggest-form">
+					<label
+						>Your name<input
+							type="text"
+							name="name"
+							required
+							autocomplete="name"
+						></label
+					><label
+						>Email address<input
+							type="email"
+							name="email"
+							required
+							autocomplete="email"
+						></label
+					><label
+						>Suggested term<input
+							type="text"
+							name="term"
+							required
+							minlength="2"
+						></label
+					><label
+						>Why should beginners learn it?<textarea
+							name="reason"
+							rows="5"
+							required
+							minlength="10"
+						></textarea></label
+					><button class="button" type="submit">Submit suggestion</button>
+				</form>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<div>
+					<strong>The Beginner Developer Glossary</strong>
+					<p>Simple explanations for the words behind the web.</p>
+				</div>
+				<nav class="footer-nav" aria-label="Footer navigation">
+					<a href="index.html">Home</a><a href="glossary.html">Glossary</a
+					><a href="guide.html">Learning Path</a
+					><a href="attributions.html">Attributions</a
+					><a href="video.html">Project Demonstration</a>
+				</nav>
+				<div class="footer-meta">
+					<p>
+						© <span id="current-year"></span> The Beginner Developer Glossary
+					</p>
+					<p>Last modified: <span id="last-modified"></span></p>
+				</div>
+			</div>
+		</footer>
+		<script type="module" src="scripts/main.js"></script>
+	</body>
+</html>

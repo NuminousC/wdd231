@@ -1,8 +1,173 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="A beginner-friendly web development glossary with simple definitions, examples, and a learning path."><meta name="author" content="Duru Rowland"><meta property="og:title" content="The Beginner Developer Glossary | Home"><meta property="og:description" content="Simple explanations for the words behind the web."><meta property="og:type" content="website"><meta property="og:site_name" content="The Beginner Developer Glossary"><title>The Beginner Developer Glossary | Home</title><link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles/small.css"><link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)"></head><body>
-<header class="site-header"><div class="header-inner"><a class="brand" href="index.html" aria-label="The Beginner Developer Glossary home"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>The Beginner Developer Glossary</span></a><div class="header-actions"><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">◐</button><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">☰ <span class="visually-hidden">Menu</span></button></div><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="glossary.html">Glossary</a><a href="guide.html">Learning Path</a></nav></div></header>
-<main><section class="hero page-container"><div class="hero-copy"><p class="eyebrow">Built for beginners</p><h1>Understand the words behind the web.</h1><p>Web development becomes easier when the vocabulary stops getting in the way. Explore simple definitions, practical examples, and a clear path through essential concepts.</p><form class="hero-search" action="glossary.html" method="get"><label for="home-search" class="visually-hidden">Search glossary terms</label><input id="home-search" name="q" type="search" placeholder="Search for a term..." autocomplete="off"><button type="submit">Search</button></form></div><div class="hero-visual" aria-hidden="true"><div class="code-window"><span>&lt;learn&gt;</span><span class="code-accent">understand</span><span>&lt;/learn&gt;</span><small>HTML · CSS · JavaScript</small></div></div></section>
-<section class="page-container section-block" aria-labelledby="featured-heading"><div class="section-heading"><div><p class="eyebrow">Start here</p><h2 id="featured-heading">Featured terms</h2></div><a class="text-link" href="glossary.html">View all terms →</a></div><div class="term-grid featured-grid" id="featured-terms" aria-live="polite"><p class="loading">Loading glossary terms...</p></div></section>
-<section class="page-container learning-preview" aria-labelledby="path-preview-heading"><div><p class="eyebrow">Learn with direction</p><h2 id="path-preview-heading">Your beginner learning path</h2><p>Learn the language of the web in a sensible order: understand structure, add presentation, then introduce behavior and browser interaction.</p><a class="button secondary-button" href="guide.html">Explore the learning path</a></div><div class="path-mini" aria-label="Learning path: HTML, CSS, JavaScript, Browser APIs"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Browser APIs</span></div></section>
-<section class="page-container suggest-panel" aria-labelledby="suggest-heading"><div><p class="eyebrow">Help grow the glossary</p><h2 id="suggest-heading">Can't find a term?</h2><p>Use the suggestion form to tell us which beginner-friendly concept should be added next.</p></div><a class="button" href="guide.html#suggest-term">Suggest a term</a></section></main>
-<footer class="site-footer"><div class="footer-inner"><div><strong>The Beginner Developer Glossary</strong><p>Simple explanations for the words behind the web.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="guide.html">Learning Path</a><a href="attributions.html">Attributions</a><a href="video.html">Project Demonstration</a></nav><div class="footer-meta"><p>© <span id="current-year"></span> The Beginner Developer Glossary</p><p>Last modified: <span id="last-modified"></span></p></div></div></footer>
-<script type="module" src="scripts/main.js"></script><script type="module" src="scripts/home.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta
+			name="description"
+			content="A beginner-friendly web development glossary with simple definitions, examples, and a learning path."
+		>
+		<meta name="author" content="Duru Rowland">
+		<meta property="og:title" content="The Beginner Developer Glossary | Home">
+		<meta
+			property="og:description"
+			content="Simple explanations for the words behind the web."
+		>
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="The Beginner Developer Glossary">
+		<title>The Beginner Developer Glossary | Home</title>
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;600&display=swap"
+			rel="stylesheet"
+		>
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-inner">
+				<a
+					class="brand"
+					href="index.html"
+					aria-label="The Beginner Developer Glossary home"
+					><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span
+					><span>The Beginner Developer Glossary</span></a
+				>
+				<div class="header-actions">
+					<button
+						class="theme-toggle"
+						type="button"
+						aria-pressed="false"
+						aria-label="Switch to dark mode"
+					>
+						◐
+					</button><button
+						class="menu-button"
+						type="button"
+						aria-expanded="false"
+						aria-controls="site-nav"
+					>
+						☰ <span class="visually-hidden">Menu</span>
+					</button>
+				</div>
+				<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+					<a href="index.html" aria-current="page">Home</a
+					><a href="glossary.html">Glossary</a
+					><a href="guide.html">Learning Path</a>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<section class="hero page-container">
+				<div class="hero-copy">
+					<p class="eyebrow">Built for beginners</p>
+					<h1>Understand the words behind the web.</h1>
+					<p>
+						Web development becomes easier when the vocabulary stops getting in
+						the way. Explore simple definitions, practical examples, and a clear
+						path through essential concepts.
+					</p>
+					<form class="hero-search" action="glossary.html" method="get">
+						<label for="home-search" class="visually-hidden"
+							>Search glossary terms</label
+						><input
+							id="home-search"
+							name="q"
+							type="search"
+							placeholder="Search for a term..."
+							autocomplete="off"
+						><button type="submit">Search</button>
+					</form>
+				</div>
+				<div class="hero-visual" aria-hidden="true">
+					<div class="code-window">
+						<span>&lt;learn&gt;</span><span class="code-accent">understand</span
+						><span>&lt;/learn&gt;</span><small>HTML · CSS · JavaScript</small>
+					</div>
+				</div>
+			</section>
+			<section
+				class="page-container section-block"
+				aria-labelledby="featured-heading"
+			>
+				<div class="section-heading">
+					<div>
+						<p class="eyebrow">Start here</p>
+						<h2 id="featured-heading">Featured terms</h2>
+					</div>
+					<a class="text-link" href="glossary.html">View all terms →</a>
+				</div>
+				<div
+					class="term-grid featured-grid"
+					id="featured-terms"
+					aria-live="polite"
+				>
+					<p class="loading">Loading glossary terms...</p>
+				</div>
+			</section>
+			<section
+				class="page-container learning-preview"
+				aria-labelledby="path-preview-heading"
+			>
+				<div>
+					<p class="eyebrow">Learn with direction</p>
+					<h2 id="path-preview-heading">Your beginner learning path</h2>
+					<p>
+						Learn the language of the web in a sensible order: understand
+						structure, add presentation, then introduce behavior and browser
+						interaction.
+					</p>
+					<a class="button secondary-button" href="guide.html"
+						>Explore the learning path</a
+					>
+				</div>
+				<div
+					class="path-mini"
+					aria-label="Learning path: HTML, CSS, JavaScript, Browser APIs"
+				>
+					<span>HTML</span><span>CSS</span><span>JavaScript</span
+					><span>Browser APIs</span>
+				</div>
+			</section>
+			<section
+				class="page-container suggest-panel"
+				aria-labelledby="suggest-heading"
+			>
+				<div>
+					<p class="eyebrow">Help grow the glossary</p>
+					<h2 id="suggest-heading">Can't find a term?</h2>
+					<p>
+						Use the suggestion form to tell us which beginner-friendly concept
+						should be added next.
+					</p>
+				</div>
+				<a class="button" href="guide.html#suggest-term">Suggest a term</a>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<div>
+					<strong>The Beginner Developer Glossary</strong>
+					<p>Simple explanations for the words behind the web.</p>
+				</div>
+				<nav class="footer-nav" aria-label="Footer navigation">
+					<a href="index.html">Home</a><a href="glossary.html">Glossary</a
+					><a href="guide.html">Learning Path</a
+					><a href="attributions.html">Attributions</a
+					><a href="video.html">Project Demonstration</a>
+				</nav>
+				<div class="footer-meta">
+					<p>
+						© <span id="current-year"></span> The Beginner Developer Glossary
+					</p>
+					<p>Last modified: <span id="last-modified"></span></p>
+				</div>
+			</div>
+		</footer>
+		<script type="module" src="scripts/main.js"></script>
+		<script type="module" src="scripts/home.js"></script>
+	</body>
+</html>

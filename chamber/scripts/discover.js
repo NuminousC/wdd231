@@ -5,7 +5,9 @@ const visitMessage = document.querySelector("#visit-message");
 const dialog = document.querySelector("#discover-dialog");
 const dialogTitle = document.querySelector("#discover-dialog-title");
 const dialogAddress = document.querySelector("#discover-dialog-address");
-const dialogDescription = document.querySelector("#discover-dialog-description");
+const dialogDescription = document.querySelector(
+	"#discover-dialog-description",
+);
 const dialogSource = document.querySelector("#discover-dialog-source");
 const dialogClose = document.querySelector("#discover-dialog-close");
 

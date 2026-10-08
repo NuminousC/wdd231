@@ -1,4 +1,119 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Information about the WDD231 project demonstration video for The Beginner Developer Glossary."><meta name="author" content="Duru Rowland"><title>Project Demonstration | The Beginner Developer Glossary</title><link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles/small.css"><link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)"></head><body>
-<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span>The Beginner Developer Glossary</span></a><div class="header-actions"><button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">◐</button><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">☰</button></div><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="guide.html">Learning Path</a></nav></div></header>
-<main class="page-container action-page"><section class="info-panel" aria-labelledby="video-heading"><p class="eyebrow">WDD231 project demonstration</p><h1 id="video-heading">Project demonstration</h1><p>A video demonstration is normally provided here to show the project's JavaScript data integration and asynchronous functionality.</p><div class="notice"><h2>Video unavailable</h2><p>At the time of submission, I do not have the equipment required to produce the requested face-and-screen demonstration video. My available laptop has a poor camera and its microphone does not work, which prevents me from creating a recording that meets the stated video requirements.</p><p>The project itself contains the required functionality and the JavaScript implementation can be inspected directly in the project files and demonstrated through the working website.</p></div><h2>What the demonstration would cover</h2><ul><li>Fetching the glossary JSON data with the Fetch API.</li><li>Using async/await and try/catch for asynchronous data loading.</li><li>Dynamically generating glossary cards from the data.</li><li>Searching, filtering, and using array methods.</li><li>Using localStorage for saved glossary terms and theme preference.</li><li>Opening and interacting with the accessible term-detail dialog.</li></ul><a class="button" href="index.html">Return home</a></section></main>
-<footer class="site-footer"><div class="footer-inner"><div><strong>The Beginner Developer Glossary</strong><p>Simple explanations for the words behind the web.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="index.html">Home</a><a href="glossary.html">Glossary</a><a href="guide.html">Learning Path</a><a href="attributions.html">Attributions</a><a href="video.html" aria-current="page">Project Demonstration</a></nav><div class="footer-meta"><p>© <span id="current-year"></span> The Beginner Developer Glossary</p><p>Last modified: <span id="last-modified"></span></p></div></div></footer><script type="module" src="scripts/main.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta
+			name="description"
+			content="Information about the WDD231 project demonstration video for The Beginner Developer Glossary."
+		>
+		<meta name="author" content="Duru Rowland">
+		<title>Project Demonstration | The Beginner Developer Glossary</title>
+		<meta
+			property="og:title"
+			content="Project Demonstration | The Beginner Developer Glossary"
+		>
+		<meta
+			property="og:description"
+			content="Information about the WDD231 project demonstration video for The Beginner Developer Glossary."
+		>
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="The Beginner Developer Glossary">
+		<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+		<link rel="stylesheet" href="styles/small.css">
+		<link rel="stylesheet" href="styles/larger.css" media="(min-width:700px)">
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="header-inner">
+				<a class="brand" href="index.html"
+					><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span
+					><span>The Beginner Developer Glossary</span></a
+				>
+				<div class="header-actions">
+					<button
+						class="theme-toggle"
+						type="button"
+						aria-pressed="false"
+						aria-label="Switch to dark mode"
+					>
+						◐
+					</button><button
+						class="menu-button"
+						type="button"
+						aria-expanded="false"
+						aria-controls="site-nav"
+					>
+						☰
+					</button>
+				</div>
+				<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+					<a href="index.html">Home</a><a href="glossary.html">Glossary</a
+					><a href="guide.html">Learning Path</a>
+				</nav>
+			</div>
+		</header>
+		<main class="page-container action-page">
+			<section class="info-panel" aria-labelledby="video-heading">
+				<p class="eyebrow">WDD231 project demonstration</p>
+				<h1 id="video-heading">Project demonstration</h1>
+				<p>
+					A video demonstration is normally provided here to show the project's
+					JavaScript data integration and asynchronous functionality.
+				</p>
+				<div class="notice">
+					<h2>Video unavailable</h2>
+					<p>
+						At the time of submission, I do not have the equipment required to
+						produce the requested face-and-screen demonstration video. My
+						available laptop has a poor camera and its microphone does not work,
+						which prevents me from creating a recording that meets the stated
+						video requirements.
+					</p>
+					<p>
+						The project itself contains the required functionality and the
+						JavaScript implementation can be inspected directly in the project
+						files and demonstrated through the working website.
+					</p>
+				</div>
+				<h2>What the demonstration would cover</h2>
+				<ul>
+					<li>Fetching the glossary JSON data with the Fetch API.</li>
+					<li>
+						Using async/await and try/catch for asynchronous data loading.
+					</li>
+					<li>Dynamically generating glossary cards from the data.</li>
+					<li>Searching, filtering, and using array methods.</li>
+					<li>
+						Using localStorage for saved glossary terms and theme preference.
+					</li>
+					<li>
+						Opening and interacting with the accessible term-detail dialog.
+					</li>
+				</ul>
+				<a class="button" href="index.html">Return home</a>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<div class="footer-inner">
+				<div>
+					<strong>The Beginner Developer Glossary</strong>
+					<p>Simple explanations for the words behind the web.</p>
+				</div>
+				<nav class="footer-nav" aria-label="Footer navigation">
+					<a href="index.html">Home</a><a href="glossary.html">Glossary</a
+					><a href="guide.html">Learning Path</a
+					><a href="attributions.html">Attributions</a
+					><a href="video.html" aria-current="page">Project Demonstration</a>
+				</nav>
+				<div class="footer-meta">
+					<p>
+						© <span id="current-year"></span> The Beginner Developer Glossary
+					</p>
+					<p>Last modified: <span id="last-modified"></span></p>
+				</div>
+			</div>
+		</footer>
+		<script type="module" src="scripts/main.js"></script>
+	</body>
+</html>
