@@ -479,6 +479,10 @@ p {
 	overflow-x: auto;
 	border-radius: 8px;
 }
+.video-link {
+	display: block;
+	margin: 1.5rem 0;
+}
 .topic-icon {
 	vertical-align: middle;
 	margin-right: 0.5rem;
